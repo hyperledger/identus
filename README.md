@@ -12,7 +12,7 @@ Identus consists of several core components each one with it's own repository. T
 
 - [Cloud Agent](https://github.com/hyperledger/identus-cloud-agent)
 - [Mediator](https://github.com/input-output-hk/atala-prism-mediator) 
-- [DIDComm v2 Mediator - Test Suite](https://github.com/input-output-hk/)
+- [DIDComm v2 Mediator - Test Suite](https://github.com/input-output-hk/didcomm-v2-mediator-test-suite)
 - [Apollo Cryptographic Library](https://github.com/input-output-hk/atala-prism-apollo)
 - Edge Agent SDKs:
   - [TypeScript](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts)
