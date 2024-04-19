@@ -10,7 +10,7 @@ To quickly get up and running and explore the project's capabilities, refer to o
 
 Identus consists of several core components each one with it's own repository. They can be found on the links below:  
 
-- [Cloud Agent](https://github.com/hyperledger-labs/open-enterprise-agent)
+- [Cloud Agent](https://github.com/hyperledger/identus-cloud-agent)
 - [Mediator](https://github.com/input-output-hk/atala-prism-mediator) 
 - [DIDComm v2 Mediator - Test Suite](https://github.com/input-output-hk/)
 - [Apollo Cryptographic Library](https://github.com/input-output-hk/atala-prism-apollo)
