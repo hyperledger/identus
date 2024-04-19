@@ -20,6 +20,7 @@ Identus consists of several core components each one with it's own repository. T
   - [Swift](https://github.com/input-output-hk/atala-prism-wallet-sdk-swift)
 
 # Get Involved!
+
 We're building Identus with the community, and your participation is vital. Here's how you can contribute:
 
 ### Found Something? Let's Fix It!
@@ -34,6 +35,9 @@ We're building Identus with the community, and your participation is vital. Here
 
 ### Let's Connect!
 
-**Discord:** Join our server for real-time discussions and support: https://discord.gg/atala
+**Discord:** : [Join our server for real-time discussions and support](https://discord.gg/hyperledger)
 
-**Community Calls:** Get the latest updates and participate in our regular calls. [Add details about how to find info on calls]
+**Community Calls:** [Get the latest updates and participate in our regular calls](https://lists.hyperledger.org/g/identus/calendar)
+
+**Mailing List:** [Join our mailing list](https://lists.hyperledger.org/g/identus)
+
