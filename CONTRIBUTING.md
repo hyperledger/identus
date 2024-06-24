@@ -161,3 +161,93 @@ It is recommended to apply appropriate labels such as "out of scope", "can't rep
 ### Who Should Close Issues
 - The Original Reporter: May close the issue if they are satisfied with the resolution.
 - Maintainers/Contributors: Those with write permissions can close issues as described above.
+
+# Releasing Identus
+
+As per [README](./README.md), Identus is consisting of several core components that are validated as an eco-system and a node and corresponding documentation. This section is describing the release process. The release manager is the owner of this process and is a chosen maintainer.
+
+1. System release candidate
+2. System-level testing and quality gates
+3. System release note approval
+4. Release finalization
+
+## Step1 - System release candidate
+When an eco-system release is planned, each component should have a release candidate confirmed with the component owner: it thus shall have an existing `pre-release` release note for that component tag: if not, the release manager should ping the component owner to create the corresponding component release note.
+
+### Individual component release 
+Note that all components of Identus are released and tested independently. It means that each component has its own release cycle and versioning. This is possible because all components are designed to be backward compatible and are tested against the latest version of other components. Refer to respective releasing component section *add the links to each component release process here TBC*.
+
+:::info
+When a new version of a component is released, it is automatically published to the registry (npm, GitHub, etc) and is ready to be used by other components.
+:::
+
+### Eco-system release candidate
+It is then formed by the sum of the component release candidates and ready to be run under the system level tests. 
+
+## Step2 - Quality Assurance (QA) validation
+
+Quality Assurance should guarantee that all components versions are working properly within the released version on a pre-production environment (*the environment TBC if it is SIT*).
+
+This process consists in:
+- Adhoc and manual testing
+- Running regression and e2e for all components
+- Updating any regression test if required
+- Adding the new scenarios to cover the newly added functionalities
+
+**Running end-to-end tests:**
+
+The SDKs e2e are the system level testing, which are the most important for the release.
+- Using SIT environment
+  - Check the environment is using the correct version (Cloud Agent, Mediator, Node, etc)
+  - Run the SDKs e2e tests
+- Locally
+  - Spin up the environment locally with the respective versions
+  - Run the SDKs e2e tests
+
+  If a bug is found, it will be submitted to the corresponding component after analyse and triaged (*Add triage section with labelling next TBD*). Only `Priority: critical` bug will prevent the release and restrictions will be added in the release note accordingly with a fix plan.
+  When a fix is needed, the component release candidate will be updated to include the said fix and the QA validation can finally pass.
+
+**Performance tests**
+*This will be added in a later iteration of this process*
+
+**Quick Start Guide execution:**
+With the support of QA, one maintainer (*TBC until now, it was the QA enginner but it would be good that it is rolling assignment among maintainers team TBC*) will execute the Quick Start Guide manually following the steps with the versions of the components indicated by the release candidate. The outcome is the Quick Start Guide execution is succesfull and the document is updated with the new versioning.
+*TBC: potentially a compatibility table is updated.*
+
+## Step3 - Create the eco-system release note and get it approved
+For a release `vx.y`:
+- In the Identus repo [hyperledger/identus](https://github.com/hyperledger/identus/), check the latest released version; it should be `Identus va.b` format. E.g `Identus v2.12`.
+- Click on `Release` and `Draft a new release` button
+   - In `Choose a tag` button, create the tag `vx.y`
+   - Target = `main`
+   - Previous tag `Auto`
+- Click on `Generate change log`: this will generate the log for this repository only, which should be reviewed and also amended by each of the components release notes:
+   - Amend the release note template (copied from the previous release if a template file is not existing yet).
+   - For each component, add the change log according to each component (by default, it is the link to the component release, already available from the component release).
+   - Once ready for review, select `Set as a pre-release` and click on `Save Draft`
+- Ask component owner to review: this is the critical step. The release owner should get an approval from each of the component: Cloud Agent, Edge Agent SDK Swift, KMP, TS, Mediator, Node, Docs.
+- Ask QA team to validate the release as per Step2 above.
+- Once all have reviewed and approved (*see below options TBC*), publish the release by editing it and unselect `Set as a pre-release` and click on `Publish release` button: the release `Identus vx.y` should be seen as the `latest`; if not, check the reason and fix it.
+- *Options to get the component owners approval TBC*:
+    - *Option1: add a checkbox in the release note template and each component owners and the QA lead will check it if ok.*
+    - *Option2: create a dedicated PR with the list of the component owners and QA lead are reviewers. The release note is approved when all the reviewers have approved the PR.*
+    - Having the checkbox would help to add checklist, such as the Quick Start Guide is executed, compatibility table is updated, a security scanning (automatic or manual) at component level was executed, ...
+
+
+## Step4 - Publish, deployment and announcement
+### For components, section to be added 
+### Documentation Website
+
+- To deploy the documentation into production, 
+  - Find the `portal version` of the Documentation Portal from the latest [release](https://github.com/hyperledger/identus/releases).
+  - In atala-prism-docs repository, run the [workflow](https://github.com/input-output-hk/atala-prism-docs/actions/workflows/deployment.yml). 
+  - To deploy it, click the `Run Workflow` button and set the `version to deploy` with the `portal version` and set the `Environment to trigger update on` value to `production`
+  - Click the green button.
+To check if the right version was deployed, go to the public site, [https://docs.atalaprism.io/](https://docs.atalaprism.io/), and check that the Agent API version is the one that is found in the [release](https://github.com/hyperledger/identus/releases) (the same file you used in the step 1).
+
+### Announcement
+
+Once the release entry has been approved, the eco-system release may be announced by putting a message together (*template to be added TBC*) and shared via the different channels:
+
+- **Discord Hyperledger** - `identus-maintainers` channel https://discord.com/channels/905194001349627914/1226983777687965707
+
