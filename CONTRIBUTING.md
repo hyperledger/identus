@@ -175,14 +175,14 @@ As per [README](./README.md), Identus is consisting of several core components t
 When an eco-system release is planned, each component should have a release candidate confirmed with the component owner: it thus shall have an existing `pre-release` release note for that component tag: if not, the release manager should ping the component owner to create the corresponding component release note.
 
 ### Individual component release 
-Note that all components of Identus are released and tested independently. It means that each component has its own release cycle and versioning. This is possible because all components are designed to be backward compatible and are tested against the latest version of other components. Refer to respective releasing component section *add the links to each component release process here TBC*.
+Note that all components of Identus are released and tested independently. It means that each component has its own independent release cycle and versioning; Each component contains unit and integration tests to confirm that everything works as expected. This is possible because all components are designed to be backward compatible and are tested against the latest version of other components.
 
 :::info
 When a new version of a component is released, it is automatically published to the registry (npm, GitHub, etc) and is ready to be used by other components.
 :::
 
 ### Eco-system release candidate
-It is then formed by the sum of the component release candidates and ready to be run under the system level tests. 
+It is then formed by the sum of the component release candidates and ready to be run under the system level tests. There are e2e tests that check the compatibility of the components with each other.
 
 ## Step2 - Quality Assurance (QA) validation
 
