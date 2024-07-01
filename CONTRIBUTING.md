@@ -10,6 +10,7 @@ As a contributor, here are the guidelines we would like you to follow:
  - [Coding Rules](#rules)
  - [Commit Message Guidelines](#commit)
  - [Guidelines for Closing Issues](#closing)
+ - [Releasing Identus ecosystem](#releasing)
  
 
 ## <a name="dco"></a> Developer Certificate of Origin (DCO)
@@ -162,9 +163,8 @@ It is recommended to apply appropriate labels such as "out of scope", "can't rep
 - The Original Reporter: May close the issue if they are satisfied with the resolution.
 - Maintainers/Contributors: Those with write permissions can close issues as described above.
 
-# Releasing Identus
-
-As per [README](./README.md), Identus is consisting of several core components that are validated as an eco-system and a node and corresponding documentation. This section is describing the release process. The release manager is the owner of this process and is a chosen maintainer.
+# <a name="releasing"></a> Releasing Identus
+As per [README](./README.md), Identus is consisting of several core components that are validated as an ecosystem and a node and corresponding documentation. This section is describing the release process. The release manager is the owner of this process and is a chosen maintainer.
 
 1. System release candidate
 2. System-level testing and quality gates
@@ -172,16 +172,15 @@ As per [README](./README.md), Identus is consisting of several core components t
 4. Release finalization
 
 ## Step1 - System release candidate
-When an eco-system release is planned, each component should have a release candidate confirmed with the component owner: it thus shall have an existing `pre-release` release note for that component tag: if not, the release manager should ping the component owner to create the corresponding component release note.
+When an ecosystem release is planned, each component should have a release candidate confirmed with the component owner: it thus shall have an existing `pre-release` release note for that component tag: if not, the release manager should ping the component owner to create the corresponding component release note.
 
 ### Individual component release 
 Note that all components of Identus are released and tested independently. It means that each component has its own independent release cycle and versioning; Each component contains unit and integration tests to confirm that everything works as expected. This is possible because all components are designed to be backward compatible and are tested against the latest version of other components.
 
-:::info
-When a new version of a component is released, it is automatically published to the registry (npm, GitHub, etc) and is ready to be used by other components.
-:::
+> [!NOTE]  
+> When a new version of a component is released, it is automatically published to the registry (npm, GitHub, etc) and is ready to be used by other components.
 
-### Eco-system release candidate
+### Ecosystem release candidate
 It is then formed by the sum of the component release candidates and ready to be run under the system level tests. There are e2e tests that check the compatibility of the components with each other.
 
 ## Step2 - Quality Assurance (QA) validation
@@ -198,7 +197,7 @@ This process consists in:
 
 The SDKs e2e are the system level testing, which are the most important for the release.
 - Using SIT environment
-  - Check the environment is using the correct version (Cloud Agent, Mediator, Node, etc)
+  - Check the environment is using the correct version (Cloud Agent, Mediator, Node)
   - Run the SDKs e2e tests
 - Locally
   - Spin up the environment locally with the respective versions
@@ -214,7 +213,7 @@ The SDKs e2e are the system level testing, which are the most important for the 
 With the support of QA, one maintainer (*TBC until now, it was the QA enginner but it would be good that it is rolling assignment among maintainers team TBC*) will execute the Quick Start Guide manually following the steps with the versions of the components indicated by the release candidate. The outcome is the Quick Start Guide execution is succesfull and the document is updated with the new versioning.
 *TBC: potentially a compatibility table is updated.*
 
-## Step3 - Create the eco-system release note and get it approved
+## Step3 - Create the ecosystem release note and get it approved
 For a release `vx.y`:
 - In the Identus repo [hyperledger/identus](https://github.com/hyperledger/identus/), check the latest released version; it should be `Identus va.b` format. E.g `Identus v2.12`.
 - Click on `Release` and `Draft a new release` button
@@ -247,7 +246,8 @@ To check if the right version was deployed, go to the public site, [https://docs
 
 ### Announcement
 
-Once the release entry has been approved, the eco-system release may be announced by putting a message together (*template to be added TBC*) and shared via the different channels:
+Once the release entry has been approved, the ecosystem release may be announced by putting a message together (*template to be added TBC*) and shared via the different channels:
 
 - **Discord Hyperledger** - `identus-maintainers` channel https://discord.com/channels/905194001349627914/1226983777687965707
+- **Discord Hyperledger** - `identus-announcements` channel https://discord.com/channels/905194001349627914/1230596020790886490
 
