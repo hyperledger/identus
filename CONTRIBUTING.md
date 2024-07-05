@@ -10,6 +10,7 @@ As a contributor, here are the guidelines we would like you to follow:
  - [Coding Rules](#rules)
  - [Commit Message Guidelines](#commit)
  - [Guidelines for Closing Issues](#closing)
+ - [Triage process and labels](#triage)
  - [Releasing Identus ecosystem](#releasing)
  
 
@@ -156,12 +157,99 @@ Ensure that the resolution actually addresses the issue effectively. Involve oth
 ### Communication
 Always leave a comment explaining the reason for closing the issue. This helps provide clarity and context to all participants.
 
-### Labeling
-It is recommended to apply appropriate labels such as "out of scope", "can't repro", "duplicate", "stale" or "won't-fix" to closed issues. This aids in tracking and analysis.
-
 ### Who Should Close Issues
 - The Original Reporter: May close the issue if they are satisfied with the resolution.
 - Maintainers/Contributors: Those with write permissions can close issues as described above.
+
+### Labeling
+It is recommended to apply appropriate labels such as "out of scope", "can't repro", "duplicate", "stale" or "won't-fix" to closed issues. This aids in tracking and analysis.
+
+# <a name="triage"></a> Triage process and labels
+Main part of adding and updating labels is done through the triage process by a triage team or the implementation team, which are both part of maintainers. This is to making sure an issue is at an acceptable level (description, clarity) before it is assigned to be analysed.
+In Identus, we are aiming that all the components are using same labels to bring convenience in review and coherence. This is not an easy path and will necessit education within the maintainers community. 
+A dedicated triage call might be set with defined maintainers to get the triage kicked off and thus momentum will be gained.
+
+Labels are categorised with a prefix that will help showing the info in the same order on a labeled issue:
+- `triage`: this gives the action requested from the triage team. It will help to filter during the triage
+- `type`: to be able to filter issues between type (e.g: bug, enhancement)
+- `priority`: to give the priority of the issue
+- `team`: to indicate which team will first analyse the issue; once analysed, the issue will be triaged anew with `component`, `triage`, `status` labels.
+- `component`: the team will set this label once the issue is analysed, to indicate which components are impacted
+- `status`: the team may use this label to give visibility on the progress on the issue resolution
+
+Color code will be used to highlight in a similar way same type of label. E.g: red cor a critical issue. And one type might be always with the same color.
+
+High level triage process:
+- Triage committee should consist of at least a tech lead, a product owner, the maintainer chairman. Others can be invited: QA lead, DevOps lead.
+- In a dedicated regular (weekly at least) call, the triage committee is reviewing the open issues in each of the Identus components related repositories and updating the labels `triage`, `type`, `priority`, `team` (see below table) and add comment to explain triage decision as see fit. At the discretion of the triage team, some part of the triage might be executed in asynchronous way. It is also taking a decision on the issues that are not progressing or lacking of interest. But above all, it is alerting and making sure the critical issues are prioritised to the community interest.
+- The assigned `team` is usually updating those types: `status`, `component` and update the assignee.
+- The outcome of the triage should be shared on Discord annoucement channel (or a dedicated triage channel), highlighting: 
+   - Critical issues
+   - Outstanding actions
+- In a repo, the triage committee will:
+ - Review the open issues that are without any label first
+ - From the newest to the oldest
+ 
+The labels that are defined and additional process details are precised in the following table:
+| Label              | Description                                                                | Additional process                   | Notes               |
+|--------------------|----------------------------------------------------------------------------|--------------------------------------|---------------------|
+| triage:needs-repro | Indicates that a bug description is lacking steps to reproduce             | Assignee = the reporter of the issue | |
+| triage:needs-fix | This confirms that the bug is ready to be analysed further by the maintainer | `Team` label is updated to the team that is assigned to fix. `Assignee` is set to the team's lead (then the team's lead will assign further) |
+| triage:stale | For issues that are seen once or have no paradigm to reproduce. The triage will then decide what action to do in order to progress. For example, asking the community on Discord if similar issue was seen, or asking QA `team` to make dedicated tests to reproduce. This defect is under monitoring and after a few (four) weeks, the triage team will decide and update the comment and status according to the result | Triage team add a comment to describe the next steps to the `Team` label and `Assignee` is set. Label `status:terminated` might be used if decision is to close the issue. |
+| triage:good-first-issue/up-for-grabs | This indicates to the community that this issue would be a good candidate to start with. No next step. |
+| triage:help-wanted | The issue will not be taken in priority and maintainers are requested contributors to join and work on this issue |
+| triage:query | Maintainer is requesting for additional info for the issue in order to continue issue analysis and fixing |
+| triage:tech-debt | This issue is to be treated as technical debt |
+| triage:out-of-scope | See design limitation |
+| triage:rejected | For a `Type:bug`, it indicates the issue is not a bug. If the triage team confirms it is not a bug, then the Label `Status` is changed to Terminated |
+| triage:can’t-repro | It indicates the issue cannot be reproduced. 
+| triage:duplicate | Indicates the issue is a duplicate of an existing issue. If the triage team confirms it is duplicate, then the Label `Status` is changed to Terminated |
+| triage:won’t-fix | the decision is to accept the issue as is and not to work on this issue |
+| triage:design-limitation| Indicates the implementation is following the specification or an existing ADR (to be referred in the analyse) and awaiting confirmation by triage. If the triage team confirms it is design limitation, then the label `Status` is changed to Terminated |
+| type:bug | For a defect found, it shall follow the template 'Bug report' |
+| type:docs | For a change or issue only related to documentation |
+| type:enhancement | For a new feature or an improvement of an existing feature. It shall follow the template 'Feature request' |
+| type:support | The reporter is asking for support more than anything else |
+| type:research ||
+| type:maintenance ||
+| type:build | Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm) |
+| type:chore | This is to indicate the issue is for a release delivery for the ecosystem or a component release |
+| type:ci | Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs) |
+| type:refactor | This will mark an issue that neither fixes a bug nor adds a feature. It could also linked to the style and do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc) |
+| type:perf | An issue mentioning a degradation in performance for a component or the whole ecosystem |
+| type:test | Adding missing tests or correcting existing tests. This could be for a unit test, an integration test, a validation test |
+| type:roadmap | This issue will appear in the project roadmap https://github.com/orgs/hyperledger/projects/48 |
+| priority:critical | business is impacted, performance drained, crash, feature blocked, reproducible, interoperability, regulation, standard |
+| priority:major | feature is working but some use cases, feature is not stable, regression, frequently seen, reproducible |
+| priority:normal | feature is working but some use cases, frequently seen, UX |
+| priority:minor | no impact on the feature, not reproducible, one time seen, UI |
+| team:triage | The issues marked with this will be reviewed in a dedicated call by the triage team. The call could be the maintainers call or a specific triage call. |
+| team:product | To be analysed by the product owners |
+| team:dev | To be analysed by the engineering team |
+| team:management | For issues that are not technical, product related. E.g: process, delivery, operational |
+| team:support-L3 | This is L3 team that should filter the issue. It can be the triage team to tart with if the structure is not in place. |
+| team:qa-validation | The solution is to be validated by the testing team |
+| team:security | |
+| team:devops | |
+| component:cloud-agent | |
+| component:mediator | |
+| component:SDK-swift | |
+| component:SDK-KMP | |
+| component:SDK-TS | |
+| component:node | |
+| component:crypto-lib | |
+| component:infra | |
+| status:new | Default status added when a new issue is submitted; it has not yet been triaged | optional |
+| status:in-review | The issue is under analyse by the Assignee of the labelled Team | |
+| status:analysed | The issue is analysed with a proposed solution | |
+| status:in-progress | Assignee is fixing the issue | |
+| status:fixed | Indicates the issue is fixed | |
+| status:qa-ready | The issue is ready for retest by quality team | |
+| status:qa-progress | The issue is being tested | |
+| status:qa-support | To indicate quality team needs support, such as a pair testing or a mob session with the reporter |
+| status:suspended | To propose the issue is not fixed in the upcoming release and will be revised to a later stage (e.g: maintenance release) |
+| status:terminated | The fixed issue is confirmed by the quality team as fixed or else if `triage` label indicates else |
+| status:reopen | QA team found the solution to the issue is not OK and it needs to be re-investigated |
 
 # <a name="releasing"></a> Releasing Identus
 As per [README](./README.md), Identus is consisting of several core components that are validated as an ecosystem and a node and corresponding documentation. This section is describing the release process. The release manager is the owner of this process and is a chosen maintainer.
