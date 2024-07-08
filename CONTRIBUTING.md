@@ -200,25 +200,25 @@ The labels that are defined and additional process details are precised in the f
 | triage:help-wanted | The issue will not be taken in priority and maintainers are requested contributors to join and work on this issue |
 | triage:query | Maintainer is requesting for additional info for the issue in order to continue issue analysis and fixing |
 | triage:tech-debt | This issue is to be treated as technical debt |
-| triage:out-of-scope | See design limitation |
 | triage:rejected | For a `Type:bug`, it indicates the issue is not a bug. If the triage team confirms it is not a bug, then the Label `Status` is changed to Terminated |
 | triage:can’t-repro | It indicates the issue cannot be reproduced. 
 | triage:duplicate | Indicates the issue is a duplicate of an existing issue. If the triage team confirms it is duplicate, then the Label `Status` is changed to Terminated |
 | triage:won’t-fix | the decision is to accept the issue as is and not to work on this issue |
+| triage:out-of-scope | See design limitation |
 | triage:design-limitation| Indicates the implementation is following the specification or an existing ADR (to be referred in the analyse) and awaiting confirmation by triage. If the triage team confirms it is design limitation, then the label `Status` is changed to Terminated |
 | type:bug | For a defect found, it shall follow the template 'Bug report' |
 | type:docs | For a change or issue only related to documentation |
 | type:enhancement | For a new feature or an improvement of an existing feature. It shall follow the template 'Feature request' |
-| type:support | The reporter is asking for support more than anything else |
-| type:research ||
-| type:maintenance ||
+| type:support | The reporter is asking for support from maintainers more than anything else |
+| type:research | The scope of this ticket needs to involve reasearch (cryptographic mainly) |
+| type:roadmap | This issue will appear in the project roadmap https://github.com/orgs/hyperledger/projects/48 |
+| type:backlog | List of tasks that is not on the roadmap and there isn’t any immediate plan to work on them |
 | type:build | Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm) |
 | type:chore | This is to indicate the issue is for a release delivery for the ecosystem or a component release |
 | type:ci | Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs) |
 | type:refactor | This will mark an issue that neither fixes a bug nor adds a feature. It could also linked to the style and do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc) |
 | type:perf | An issue mentioning a degradation in performance for a component or the whole ecosystem |
 | type:test | Adding missing tests or correcting existing tests. This could be for a unit test, an integration test, a validation test |
-| type:roadmap | This issue will appear in the project roadmap https://github.com/orgs/hyperledger/projects/48 |
 | priority:critical | business is impacted, performance drained, crash, feature blocked, reproducible, interoperability, regulation, standard |
 | priority:major | feature is working but some use cases, feature is not stable, regression, frequently seen, reproducible |
 | priority:normal | feature is working but some use cases, frequently seen, UX |
@@ -229,16 +229,16 @@ The labels that are defined and additional process details are precised in the f
 | team:management | For issues that are not technical, product related. E.g: process, delivery, operational |
 | team:support-L3 | This is L3 team that should filter the issue. It can be the triage team to tart with if the structure is not in place. |
 | team:qa-validation | The solution is to be validated by the testing team |
-| team:security | |
-| team:devops | |
-| component:cloud-agent | |
-| component:mediator | |
-| component:SDK-swift | |
-| component:SDK-KMP | |
-| component:SDK-TS | |
-| component:node | |
-| component:crypto-lib | |
-| component:infra | |
+| team:security | The Security team will be responsible to analyse this ticket |
+| team:devops | The DevOps/SRE team will be responsible to analyse this ticket |
+| component:cloud-agent | After analyse by the `team`, the Cloud Agent is impacted by this issue |
+| component:mediator | After analyse by the `team`, the Mediator is impacted by this issue |
+| component:SDK-swift | After analyse by the `team`, the SDK Swift is impacted by this issue |
+| component:SDK-KMP | After analyse by the `team`, the SDK KMP is impacted by this issue |
+| component:SDK-TS | After analyse by the `team`, the SDK TS is impacted by this issue |
+| component:node | After analyse by the `team`, the Node is impacted by this issue |
+| component:crypto-lib | After analyse by the `team`, the Cryptographic library is impacted by this issue |
+| component:infra | After analyse by the `team`, the Infrastructure is impacted by this issue |
 | status:new | Default status added when a new issue is submitted; it has not yet been triaged | optional |
 | status:in-review | The issue is under analyse by the Assignee of the labelled Team | |
 | status:analysed | The issue is analysed with a proposed solution | |
