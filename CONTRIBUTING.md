@@ -170,11 +170,11 @@ In Identus, we are aiming that all the components are using same labels to bring
 
 Labels are categorised with a prefix that will help showing the info in the same order on a labeled issue: if this is not adding value, we might reconsider.
 - `triage`: this gives the action requested from the triage team. It will help to filter during the triage
-- `type`: to be able to filter issues between type (e.g: bug, enhancement)
-- `priority`: to give the priority of the issue
+- `type`: to mark which category belongs an issues (e.g: bug, enhancement)
+- `priority`: reflects the severity and order in which issues should be addressed, more from the business impact rather than the technical difficulty
 - `team`: to indicate which team will first analyse the issue; once analysed, the issue will be triaged anew with `component`, `triage`, `status` labels.
-- `component`: the team will set this label once the issue is analysed, to indicate which components are impacted
-- `status`: the team may use this label to give visibility on the progress on the issue resolution
+- `component`: the team may set this label once the issue is analysed, to indicate which components are impacted
+- `status`: this label may be used for development cycle to give visibility on the progress on the issue resolution, but a kanban board in Github might be used instead. It is kept here and might be reviewed and defined in a later stage
 
 Color code will be used to highlight in a similar way same type of label. E.g: red cor a critical issue. And one type might be always with the same color.
 
@@ -191,9 +191,9 @@ High level triage process:
  - Review the open issues that are without any label first
  - From the newest to the oldest
  
-The labels that are defined and additional process details are precised in the following table:
-| Label              | Description                                                                | Additional process                   | Notes               |
-|--------------------|----------------------------------------------------------------------------|--------------------------------------|---------------------|
+The triage labels that are defined and additional process details are precised in the following table:
+| Label              | Description                                                                | Additional process                   | 
+|--------------------|----------------------------------------------------------------------------|--------------------------------------|
 | triage:needs-repro | Indicates that a bug description is lacking steps to reproduce             | Assignee = the reporter of the issue | |
 | triage:needs-fix | This confirms that the bug is ready to be analysed further by the maintainer | `Team` label is updated to the team that is assigned to fix. `Assignee` is set to the team's lead (then the team's lead will assign further) |
 | triage:stale | For issues that are seen once or have no paradigm to reproduce. The triage will then decide what action to do in order to progress. For example, asking the community on Discord if similar issue was seen, or asking QA `team` to make dedicated tests to reproduce. This defect is under monitoring and after a few (four) weeks, the triage team will decide and update the comment and status according to the result | Triage team add a comment to describe the next steps to the `Team` label and `Assignee` is set. Label `status:terminated` might be used if decision is to close the issue |
@@ -219,13 +219,13 @@ The labels that are defined and additional process details are precised in the f
 | type:refactor | This will mark an issue that neither fixes a bug nor adds a feature. It could also linked to the style and do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc) |
 | type:perf | An issue mentioning a degradation in performance for a component or the whole ecosystem |
 | type:test | Adding missing tests or correcting existing tests. This could be for a unit test, an integration test, a validation test |
-| priority:critical | business is impacted, performance drained, crash, feature blocked, reproducible, interoperability, regulation, standard |
+| priority:critical | A large number of users or stakeholders are impacted, performance drained, crash, feature blocked, reproducible, interoperability, legal & regulatory, standard non-compliancy, security breach |
 | priority:major | feature is working but some use cases, feature is not stable, regression, frequently seen, reproducible |
-| priority:normal | feature is working but some use cases, frequently seen, UX |
-| priority:minor | no impact on the feature, not reproducible, one time seen, UI |
+| priority:minor | no impact on the feature, not reproducible, not frequently seen, UI & cosmetics |
 | team:triage | The issues marked with this will be reviewed in a dedicated call by the triage team. The call could be the maintainers call or a specific triage call. |
 | team:product | To be analysed by the product owners |
-| team:dev | To be analysed by the engineering team |
+| team:frontend | To be analysed by the engineering frontend team |
+| team:platform | To be analysed by the engineering platform team |
 | team:management | For issues that are not technical, product related. E.g: process, delivery, operational |
 | team:support-L3 | This is L3 team that should filter the issue. It can be the triage team to tart with if the structure is not in place. |
 | team:qa-validation | The solution is to be validated by the testing team |
@@ -239,6 +239,10 @@ The labels that are defined and additional process details are precised in the f
 | component:node | After analyse by the `team`, the Node is impacted by this issue |
 | component:crypto-lib | After analyse by the `team`, the Cryptographic library is impacted by this issue |
 | component:infra | After analyse by the `team`, the Infrastructure is impacted by this issue |
+
+For future use and for reference only, the development cycle labels that are defined and additional process details are precised in the following table:
+| Label              | Description                                                                | Additional process                   | 
+|--------------------|----------------------------------------------------------------------------|--------------------------------------|
 | status:new | Default status added when a new issue is submitted; it has not yet been triaged | optional |
 | status:in-review | The issue is under analyse by the Assignee of the labelled Team | |
 | status:analysed | The issue is analysed with a proposed solution | |
