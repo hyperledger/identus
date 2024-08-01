@@ -4,40 +4,44 @@ Identus provides components to develop decentralized identity solutions that adh
 
 # Documentation and Quick Start Guide
 
-To quickly get up and running and explore the project's capabilities, refer to our [Quick Start Guide](https://docs.atalaprism.io/docs/quick-start).  For more comprehensive instructions and tutorials, please explore our [Documentation](https://docs.atalaprism.io/).
+To quickly get up and running and explore the project's capabilities, please take a look at the [Quick Start Guide](https://hyperledger.github.io/identus-docs/docs/quick-start/). You can also find more details by reading the project [Documentation](https://hyperledger.github.io/identus-docs/).
 
 # Repositories
 
 Identus consists of several core components each one with it's own repository. They can be found on the links below:  
 
-- [Cloud Agent](https://github.com/hyperledger/identus-cloud-agent)
-- [Mediator](https://github.com/input-output-hk/atala-prism-mediator) 
-- [DIDComm v2 Mediator - Test Suite](https://github.com/input-output-hk/didcomm-v2-mediator-test-suite)
-- [Apollo Cryptographic Library](https://github.com/input-output-hk/atala-prism-apollo)
+- [Cloud Agent](https://github.com/hyperledger/identus-cloud-agent/)
+- [Mediator](https://github.com/hyperledger/identus-mediator/)
 - Edge Agent SDKs:
-  - [TypeScript](https://github.com/input-output-hk/atala-prism-wallet-sdk-ts)
-  - [KMM](https://github.com/input-output-hk/atala-prism-wallet-sdk-kmm)
-  - [Swift](https://github.com/input-output-hk/atala-prism-wallet-sdk-swift)
+  - [TypeScript](https://github.com/hyperledger/identus-edge-agent-sdk-ts/) 
+  - [KMP](https://github.com/hyperledger/identus-edge-agent-sdk-kmp/)
+  - [Swift](https://github.com/hyperledger/identus-edge-agent-sdk-swift/)
+- [Apollo Cryptographic Library](https://github.com/hyperledger/identus-apollo/)
+- [Documentation](https://github.com/hyperledger/identus-docs/)
 
 # Get Involved!
 
-We're building Identus with the community, and your participation is vital. Here's how you can contribute:
+The development of Identus relies on community input, and the project maintainers appreciate your involvement. Here's how you can contribute:
 
 ### Found Something? Let's Fix It!
 
-**Bugs:** Head to the relevant GitHub repository and open an issue in the issue tracker. Detailed reports make fixing things much faster!
+🪲 **Bugs:** Head to the relevant [GitHub repository](https://github.com/hyperledger/identus/edit/chore/update-readme/README.md#repositories) and open an issue in the issue tracker. Detailed reports make fixing things much faster!
 
-**Feature Requests:** Got an idea to make Identus even better? File an issue and let's discuss how we can make it happen.  
+📚 **Documentation mistakes:** Please report it [here](https://github.com/hyperledger/identus-docs/issues). 
+
+💡 **Feature Requests:** Do you have an idea to improve Identus? Share your suggestion in an [issue](https://github.com/hyperledger/identus/issues/new/choose), and we'll discuss how it could fit into the project's roadmap.  
 
 ### Want to Build With Us?
 
-**Code Contributions:** Every contribution counts! Check out the CONTRIBUTING.md file in the repo you want to work on for our guidelines and process.
+📄 **Code Contributions:** For guidelines on how to contribute to the Identus codebase, check out the `CONTRIBUTING.md` file in the [repo](https://github.com/hyperledger/identus/edit/chore/update-readme/README.md#repositories) you want to work on.
 
 ### Let's Connect!
 
-**Discord:** : [Join our server for real-time discussions and support](https://discord.gg/hyperledger)
+💬 **Discord:** Join the [server](https://discord.com/channels/905194001349627914/1230596020790886490) for discussions and community support
 
-**Community Calls:** [Get the latest updates and participate in our regular calls](https://lists.hyperledger.org/g/identus/calendar)
+📞 **Community Calls:** Get the latest updates and participate in [Identus regular calls](https://lists.hyperledger.org/g/identus/calendar)
 
-**Mailing List:** [Join our mailing list](https://lists.hyperledger.org/g/identus)
+📽️ **Recordings:** Did you miss a community call? you can find recordings of previous meetings [here](https://wiki.hyperledger.org/display/Identus/Hyperledger+Identus) (Check the page tree at the left side)
+
+📧 **Mailing List:** Join the [mailing list](https://lists.hyperledger.org/g/identus)
 
