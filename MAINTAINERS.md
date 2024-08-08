@@ -15,6 +15,7 @@ Maintainers are assigned the following scopes in this repository:
 | Name | GitHub ID | Scope | LFID | Discord ID | Email | Company Affiliation |
 |----- | --------- | ----- | ---- | ---------- | ----- | ------------------- |
 | Allain Magyar      | amagyar-iohk  | Maintainer |      | _                  | allain.magyar@iohk.io | IOG |
+| Timothy Wells      | blockchaintimothy | Maintainer |  | timw_01400         | timothy.wells@iohk.io | IOG | 
 | Björn Sandmann     | bsandmann | Maintainer |          | bjoernsandmann     | sandmann@codedata.solutions | Blocktrust |
 | Benjamin Voiturier | bvoiturier | Maintainer |         | bvoiturier         | benjamin.voiturier@iohk.io | IOG |
 | Cristian Gonzalez  | cristianIOHK | Maintainer |       | chet_to            | cristian.castro@iohk.io | IOG |
@@ -26,8 +27,8 @@ Maintainers are assigned the following scopes in this repository:
 | Esteban Garcia     | essbante-io | Maintainer |        | essbante           | esteban.garcia@iohk.io | IOG |
 | Ezequiel Postan    | EzequielPostan | Maintainer |     | _                  | ezequiel.postan@iohk.io | IOG |
 | Fabio Pinheiro     | FabioPinheiro | Maintainer |      | fmgp               | fabio.pinheiro@iohk.io | IOG |
+| Fayyaadh Adams     | FayyaadhAdams | Maintainer |      | .fayyaadh          | fayyaadh.adams@iohk.io | IOG |
 | Goncalo Frade      | goncalo-frade-iohk | Maintainer | | goncalofrade_20576 | goncalo.frade@iohk.io | IOG |
-| Ahmed Moussa       | hamada147 | Maintainer |          | _                  | ahmed.moussa@iohk.io | IOG |
 | Lohan Spies        | lohanspies | Maintainer |         | _                  | lohan.spies@iohk.io | IOG |
 | Milos Backonja     | milosbackonja | Maintainer |      | _                  | milos.backonja@iohk.io | IOG |
 | Miloš Džepina      | milosh86 | Maintainer |           | milosdz_60141      | milos.dzepina@iohk.io | IOG |
@@ -44,8 +45,8 @@ Maintainers are assigned the following scopes in this repository:
 
 | Name | GitHub ID | Scope | LFID | Discord ID | Email | Company Affiliation |
 |----- | --------- | ----- | ---- | ---------- | ----- | ------------------- |
-| Anton Baliasnikov | antonbaliasnikov | Maintainer | | | antonbaliasnikov@gmail.com  | |
-
+| Anton Baliasnikov | antonbaliasnikov | Maintainer | | | | |
+| Ahmed Moussa      | hamada147        | Maintainer | | | | |                           
 ## The Duties of a Maintainer
 
 The expectation is for maintainers to perform the following duties for this repository. The responsibilities listed are in high to low-priority order:
