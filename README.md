@@ -49,3 +49,6 @@ The development of Identus relies on community input, and the project maintainer
 
  - 📧 **Mailing List:** Join the [mailing list](https://lists.hyperledger.org/g/identus)
 
+### Community projects
+
+Are you curious about what the community is building with Identus? Explore the 🌍[Community Projects](https://github.com/hyperledger/identus/wiki/Community-Projects) to discover a variety of initiatives and tools created by developers and contributors like you. These projects showcase the versatility of Identus and can serve as inspiration or a foundation for your own work. 
