@@ -1,6 +1,61 @@
 ![Identus](resources/images/hyperledger-identus.svg)
 ---
 Identus provides components to develop decentralized identity solutions that adhere to widely recognized self-sovereign identity (SSI) standards.  It offers complete DID and verifiable credential functionality and simplifies the complexities of adopting a decentralized identity solution into existing and new workflows.
+
+## What to expect
+
+If you're new to verifiable credentials, you'll most likely be eager to understand how a request/response schema could fit in your project/ use case.  
+Thus, we added a small example of the "Driving License Schema", where `required` fields must be present in any JSON data that uses this schema.  
+But there is room to surpress optional properties like `givenName` and even the option to add additional properties like `country` etc. 
+
+### To recap
+
+- **Required Fields**: Fields under this property are mandatory and ensure essential data is captured.
+- **Optional Properties**: Properties such as givenName can be suppressed if not needed.
+- **Additional Properties**: The schema allows for adding extra properties like 'country' to tailor it further to your needs.
+
+To dive deeper and learn more use the links in the Quickstart Guide below.
+
+```
+"schema": {
+    "$id": "https://example.com/driving-license-1.0.0",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Driving License",
+    "type": "object",
+    "properties": {
+      "emailAddress": {
+        "type": "string",
+        "format": "email"
+      },
+      "givenName": {
+        "type": "string"
+      },
+      "familyName": {
+        "type": "string"
+      },
+      "dateOfIssuance": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "drivingLicenseID": {
+        "type": "string"
+      },
+      "drivingClass": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "emailAddress",
+      "familyName",
+      "dateOfIssuance",
+      "drivingLicenseID",
+      "drivingClass"
+    ],
+    "additionalProperties": true
+  }
+```
+
+
  
 ## Quick Start Guide and Documentation
 
@@ -12,7 +67,7 @@ Interested in where Identus is headed? Check out the 🛣️[Project Roadmap](ht
 
 ## Repositories
 
-Identus consists of several core components each one with it's own repository. They can be found on the links below:  
+Identus consists of several core components, each one with its own repository. They can be found on the links below:  
 
 - [Cloud Agent](https://github.com/hyperledger/identus-cloud-agent/)
 - [Mediator](https://github.com/hyperledger/identus-mediator/)
