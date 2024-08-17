@@ -2,6 +2,10 @@
 ---
 Identus provides components to develop decentralized identity solutions that adhere to widely recognized self-sovereign identity (SSI) standards.  It offers complete DID and verifiable credential functionality and simplifies the complexities of adopting a decentralized identity solution into existing and new workflows.
 
+
+<details>
+  <summary>Click here to see an example schema</summary>
+
 ## What to expect
 
 If you're new to verifiable credentials, you'll most likely be eager to understand how a request/response schema could fit in your project/ use case.  
@@ -55,6 +59,7 @@ To dive deeper and learn more use the links in the Quickstart Guide below.
   }
 ```
 
+</details>  
 
  
 ## Quick Start Guide and Documentation
