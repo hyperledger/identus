@@ -74,7 +74,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 
 8. Ensure that all tests and CI checks pass.
 
-9. Commit your changes using a descriptive commit message that follows our [commit message conventions](#commit).
+9. Commit your changes using a descriptive commit message that follows our [commit message conventions](#commits).
    Adherence to these conventions is necessary because release notes are automatically generated from these messages.
 
      ```shell
@@ -120,9 +120,129 @@ After your pull request is merged, you can safely delete your branch and pull th
     git pull --ff upstream main
     ```
 
-## <a name="commit"></a> Commit Message Format
+## <a name="commits"></a> Commits
 
-Please, follow our [Commit Message guidelines](https://handbook.atalaprism.io/engineering/sdlc/commit-guidelines) for all commits you made, and make sure your PR title is following this format.
+The following general rules are applied to all commits:
+
+- Must be a small incremental change
+- Must be [signed and verified by GitHub](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits)
+
+### <a name="commit-message-format"></a> Commit Message Format
+
+We have very precise rules over how our Git commit messages must be formatted.
+This format leads to:
+1. Automation of releases and changelog generation
+2. Easy to read commit history
+
+This format is based on the [Conventional Commits Specification](https://www.conventionalcommits.org/en/v1.0.0/#summary).
+
+Each commit message consists of a mandatory **header**, an optional **body**, and an optional **footer**.
+
+```text
+<header>
+<BLANK LINE>
+<body>
+<BLANK LINE>
+<footer>
+```
+
+The `header` is mandatory and must conform to the [Commit Message Header](#commit-message-header) format.
+
+The `body` is optional.
+When the body is present it must be at least 20 characters long and must conform to the [Commit Message Body](#commit-message-body) format.
+
+The `footer` is optional. The [Commit Message Footer](#commit-message-footer) format describes what the footer is used for and the structure it must have.
+
+#### <a name="commit-message-header"></a> Commit Message Header
+
+```text
+<type>(<scope>): <short summary> (#<PR number>)
+  │       │             │
+  │       │             └─⫸ Summary in present tense. Not capitalized. No period at the end.
+  │       │
+  │       └─⫸ Commit Scope: castor|connect|pollux|mercury|pluto|prism-agent|...
+  │
+  └─⫸ Commit Type: build|ci|docs|feat|fix|perf|refactor|test
+
+The <type> and <summary> fields are mandatory, the (<scope>) field is optional.
+```
+
+The `<type>` and `<summary>` fields are mandatory, the `(<scope>)` field is optional.
+
+Commit message with `!` to draw attention to breaking change:
+```text
+feat!: send an email to the customer when a product is shipped
+```
+
+#### <a name="commit-message-header-type"></a> Type
+
+Must be one of the following:
+
+* **build**: Changes that affect the build system or external dependencies
+* **ci**: Changes to CI configuration files and scripts
+* **docs**: Documentation only changes
+* **feat**: A new feature
+* **fix**: A bug fix
+* **perf**: A code change that improves performance
+* **refactor**: A code change that neither fixes a bug nor adds a feature
+* **test**: Adding missing tests or correcting existing tests
+* **chore**: Changes that are not related to the codebase (e.g: update dependencies, update CI/CD configuration)
+
+NOTE: Only the types **feat**, **fix** and **perf** will be considered to calculate the next release version. (if none is present since last release no new release will be generated).
+
+#### <a name="commit-message-header-scope"></a> Scope
+
+The scope should be the name of the affected module, or it can be skipped if it's hard to determine.
+
+#### <a name="commit-message-header-summary"></a> Summary
+
+Use the summary field to provide a succinct description of the change:
+
+* use the imperative, present tense: "change" not "changed" nor "changes"
+* don't capitalize the first letter
+* no dot (.) at the end
+* add reference to the fixed issue using #<issue number> (e.g: #123)
+
+### <a name="commit-message-body"></a> Commit Message Body
+
+Just as in the summary, use the imperative, present tense: "fix" not "fixed" nor "fixes".
+
+Explain the motivation for the change in the commit message body. This commit message should explain why you are making the change.
+
+You can include a comparison of the previous behavior with the new behavior in order to illustrate the impact of the change.
+
+Usually, each project contains the template for the commit message body that should be used.
+
+### <a name="commit-message-footer"></a> Commit Message Footer
+
+The footer can contain information about breaking changes and deprecations.
+
+```text
+BREAKING CHANGE: <breaking change summary>
+<BLANK LINE>
+<breaking change description + migration instructions>
+```
+
+or
+
+```text
+DEPRECATED: <what is deprecated>
+<BLANK LINE>
+<deprecation description + recommended update path>
+```
+
+Breaking Change section should start with the phrase "BREAKING CHANGE: " followed by a summary of the breaking change, a blank line, and a detailed description of the breaking change that also includes migration instructions.
+
+Similarly, a Deprecation section should start with "DEPRECATED: " followed by a short description of what is deprecated, a blank line, and a detailed description of the deprecation that also mentions the recommended update path.
+
+### <a name="revert-commits"></a> Revert commits
+
+If the commit reverts a previous commit, it should begin with `revert:`, followed by the header of the reverted commit.
+
+The content of the commit message body should contain:
+
+* information about the SHA of the commit being reverted in the following format: This reverts commit `SHA`,
+* a clear description of the reason for reverting the commit message.
 
 ## <a name="rules"></a> Coding Rules
 
