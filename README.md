@@ -4,15 +4,15 @@ Identus provides components to develop decentralized identity solutions that adh
  
 ## Quick Start Guide and Documentation
 
-To quickly get up and running and explore the project's capabilities, please take a look at the ⚡[Quick Start Guide](https://hyperledger.github.io/identus-docs/docs/quick-start/). You can also find more details by reading the project 📄[Documentation](https://hyperledger.github.io/identus-docs/).
+To quickly get up and running and explore the project's capabilities, please look at the ⚡[Quick Start Guide](https://hyperledger.github.io/identus-docs/docs/quick-start/). You can also find more details by reading the project 📄[Documentation](https://hyperledger.github.io/identus-docs/).
 
 ## Project Roadmap 
 
-Interested in where Identus is headed? Check out the 🛣️[Project Roadmap](https://github.com/orgs/hyperledger/projects/48/) for upcoming features and planned improvements.
+Are you interested in where Identus is headed? Check out the 🛣️[Project Roadmap](https://github.com/orgs/hyperledger/projects/48/) for upcoming features and planned improvements.
 
 ## Repositories
 
-Identus consists of several core components each one with it's own repository. They can be found on the links below:  
+Identus consists of several core components, each one with its own repository. They can be found on the links below:  
 
 - [Cloud Agent](https://github.com/hyperledger/identus-cloud-agent/)
 - [Mediator](https://github.com/hyperledger/identus-mediator/)
@@ -29,15 +29,15 @@ The development of Identus relies on community input, and the project maintainer
 
 ### Found Something? Let's Fix It!
 
- - 🪲 **Bugs:** Head to the relevant [GitHub repository](https://github.com/hyperledger/identus/edit/chore/update-readme/README.md#repositories) and open an issue in the issue tracker. Detailed reports make fixing things much faster!
+ - 🪲 **Bugs:** Head to the relevant [GitHub repository](https://github.com/hyperledger/identus/blob/main/README.md#repositories) and open an issue in the issue tracker. Detailed reports make fixing things much faster!
   
  - 📝 **Documentation mistakes:** Please report it [here](https://github.com/hyperledger/identus-docs/issues). 
   
- - 💡 **Feature Requests:** Do you have an idea to improve Identus? Share your suggestion in an [issue](https://github.com/hyperledger/identus/issues/new/choose), and we'll discuss how it could fit into the project's roadmap.  
+ - 💡 **Feature Requests:** Do you know how to improve Identus? Share your suggestion in an [issue](https://github.com/hyperledger/identus/issues/new/choose), and we'll discuss how it could fit into the project's roadmap.  
 
 ### Want to Build With Us?
 
- - 📄 **Code Contributions:** For guidelines on how to contribute to the Identus codebase, check out the `CONTRIBUTING.md` file in the [repo](https://github.com/hyperledger/identus/edit/chore/update-readme/README.md#repositories) you want to work on.
+ - 📄 **Code Contributions:** For guidelines on how to contribute to the Identus codebase, check out the `CONTRIBUTING.md` file in the [repo](https://github.com/hyperledger/identus/blob/main/README.md#repositories) you want to work on.
 
 ### Let's Connect!
 
@@ -51,4 +51,4 @@ The development of Identus relies on community input, and the project maintainer
 
 ### Community projects
 
-Are you curious about what the community is building with Identus? Explore the 🌍[Community Projects](https://github.com/hyperledger/identus/wiki/Community-Projects) to discover a variety of initiatives and tools created by developers and contributors like you. These projects showcase the versatility of Identus and can serve as inspiration or a foundation for your own work. 
+Are you curious about what the community is building with Identus? Explore the 🌍[Community Projects](https://github.com/hyperledger/identus/wiki/Community-Projects) to discover a variety of initiatives and tools created by developers and contributors like you. These projects showcase the versatility of Identus and can serve as inspiration or a foundation for your work. 
