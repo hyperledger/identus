@@ -1,6 +1,6 @@
 name: Roadmap item
 description: A roadmap item is a high-level description of a desired goal in the project, defining the value to be delivered and assigning ownership for its execution.
-labels: ["roadmap"]
+labels: ["type:roadmap"]
 projects: ["hyperledger/48"]
 body:
   - type: markdown
