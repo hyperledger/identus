@@ -1,0 +1,55 @@
+name: Roadmap item
+description: A roadmap item is a high-level description of a desired goal in the project, defining the value to be delivered and assigning ownership for its execution.
+labels: ["roadmap"]
+projects: ["hyperledger/48"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > [!TIP]
+        > To add sub-tasks (child issues), insert a [task list](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists) into the <ins>first comment</ins> of the `roadmap item` after its creation.
+  - type: textarea
+    id: description
+    attributes:
+      label: Short Description
+      description: A short description of the value to be build.
+    validations:
+      required: true
+  - type: textarea
+    id: value-statement
+    attributes:
+      label: Value statement
+      description: A short paragraph describing the goal.
+      placeholder: "What is the successful end-state when this has been delivered? The value we want to deliver. If your goal starts with a verb ('launch', 'build', 'implement', etc) you probably have an action, so reframe it to describe the outcome that you want (eg: 'we want to enhance the privacy for our users when presenting proofs without reducing assurances for the verifier' is a better goal than 'implement AnonCreds'"
+    validations:
+      required: true
+  - type: input
+    id: architect
+    attributes:
+      label: Architect
+      placeholder: Name
+    validations:
+      required: false
+  - type: input
+    id: qa
+    attributes:
+      label: QA Member
+      placeholder: Name
+    validations:
+      required: false
+  - type: textarea
+    id: components
+    attributes:
+      label: Components
+      placeholder: Component names
+      description: List the components within scope 
+    validations:
+      required: true
+  - type: textarea
+    id: team
+    attributes:
+      label: Team members
+      placeholder: Names
+      description: List the people who will work on this
+    validations:
+      required: true
