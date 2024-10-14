@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 465.45455 465.45455"
+   fill="none"
+   version="1.1"
+   id="svg27"
+   sodipodi:docname="hyperledger-identus-discord-logo.svg"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   inkscape:export-filename="hyperledger-identus-discord-logo.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview27"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="0.93693693"
+     inkscape:cx="341.00481"
+     inkscape:cy="235.34135"
+     inkscape:window-width="1512"
+     inkscape:window-height="852"
+     inkscape:window-x="0"
+     inkscape:window-y="38"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     showgrid="false" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Identus"
+     transform="translate(-31.554725,76.721775)">
+    <path
+       d="M 429.078,29.1391 C 446.082,38.959 456.564,57.1 456.564,76.741 v 158.54 c 0,19.64 -10.482,37.781 -27.486,47.601 L 264.282,378.011 99.4855,282.861 C 82.4813,273.041 72,254.9 72,235.259 V 76.719 C 72,57.079 82.4813,38.938 99.4855,29.1178 L 264.282,-66 Z"
+       fill="#ffffff"
+       id="path20-7" />
+    <path
+       d="M 347.036,299.927 347.281,1.3698 272.784,44.343 v 212.728 l 74.242,42.856 z"
+       fill="#6100ff"
+       id="path21-0" />
+    <path
+       d="M 364.413,11.5305 V 299.927 l 54.95,-31.727 c 12.237,-7.065 19.781,-20.12 19.781,-34.249 V 77.517 c 0.022,-14.129 -7.523,-27.195 -19.771,-34.259 z"
+       fill="#4c00bd"
+       id="path22-3" />
+    <path
+       d="m 180.953,310.077 83.159,47.75 74.252,-42.866 -82.935,-47.878 z"
+       fill="#6100ff"
+       id="path23-9" />
+    <path
+       d="M 347.281,1.3698 264.122,-46.3806 189.87,-3.5138 272.784,44.332 347.281,1.3591 Z"
+       fill="#6696ff"
+       id="path24-9" />
+    <path
+       d="M 108.8495,43.258 C 96.6125,50.322 89.068,63.388 89.068,77.517 v 156.508 c 0.0213,14.098 7.5232,27.121 19.7177,34.207 l 54.8115,31.812 0.2234,-288.5241 z"
+       fill="#6696ff"
+       id="path25-9" />
+    <path
+       d="m 181.176,11.5305 -0.223,298.5465 74.476,-42.995 V 54.397 L 181.165,11.5305 Z"
+       fill="#6966ff"
+       id="path26-1" />
+  </g>
+  <defs
+     id="defs27">
+    <clipPath
+       id="clip0_57_1892">
+      <rect
+         width="1500"
+         height="444"
+         fill="#ffffff"
+         id="rect27"
+         x="0"
+         y="0" />
+    </clipPath>
+  </defs>
+</svg>
