@@ -15,38 +15,40 @@ Maintainers are assigned the following scopes in this repository:
 | Name | GitHub ID | Scope | LFID | Discord ID | Email | Company Affiliation |
 |----- | --------- | ----- | ---- | ---------- | ----- | ------------------- |
 | Allain Magyar      | amagyar-iohk  | Maintainer |      | _                  | allain.magyar@iohk.io | IOG |
-| Timothy Wells      | blockchaintimothy | Maintainer |  | timw_01400         | timothy.wells@iohk.io | IOG | 
-| Björn Sandmann     | bsandmann | Maintainer |          | bjoernsandmann     | sandmann@codedata.solutions | Blocktrust |
-| Benjamin Voiturier | bvoiturier | Maintainer |         | bvoiturier         | benjamin.voiturier@iohk.io | IOG |
-| Cristian Gonzalez  | cristianIOHK | Maintainer |       | chet_to            | cristian.castro@iohk.io | IOG |
-| Bassam Riman       | CryptoKnightIOG | Maintainer |    | _                  | bassam.riman@iohk.io | IOG |
-| Curtis Harding     | curtis-h | Maintainer |           | _                  | curtis.harding@iohk.io | IOG |
-| Dale Peek          | Dale-iohk | Maintainer |          | dale.doe           | dale.peek@iohk.io | IOG |
-| David Poltorak     | davepoltorak | Maintainer |       | davidpoltorak_io   | dave.poltorak@gmail.com |  |
 | Javier Labrador    | elribonazo | Maintainer |         | elribonazo         | javier.ribo@iohk.io | IOG |
-| Esteban Garcia     | essbante-io | Maintainer |        | essbante           | esteban.garcia@iohk.io | IOG |
-| Ezequiel Postan    | EzequielPostan | Maintainer |     | _                  | ezequiel.postan@iohk.io | IOG |
-| Fabio Pinheiro     | FabioPinheiro | Maintainer |      | fmgp               | fabio.pinheiro@iohk.io | IOG |
-| Fayyaadh Adams     | FayyaadhAdams | Maintainer |      | .fayyaadh          | fayyaadh.adams@iohk.io | IOG |
-| Goncalo Frade      | goncalo-frade-iohk | Maintainer | | goncalofrade_20576 | goncalo.frade@iohk.io | IOG |
-| Lohan Spies        | lohanspies | Maintainer |         | _                  | lohan.spies@iohk.io | IOG |
-| Milos Backonja     | milosbackonja | Maintainer |      | _                  | milos.backonja@iohk.io | IOG |
-| Miloš Džepina      | milosh86 | Maintainer |           | milosdz_60141      | milos.dzepina@iohk.io | IOG |
-| Shailesh Patil     | mineme0110 | Maintainer |         | mineme110          | shailesh.patil@iohk.io | IOG |
-| Michael Breuninger | mkbreuningIOHK | Maintainer |     | mkbreuning_45483   | michael.breuninger@iohk.io | IOG |
-| Pat Losoponkul     | patlo-iog | Maintainer |          | _pat_pat           | pat.losoponkul@iohk.io | IOG |
-| Peter Vielhaber    | petevielhaber | Maintainer |      | petev_iog          | peter.vielhaber@iohk.io | IOG |
-| Shota Jolbordi     | shotexa | Maintainer |            | xesus1337          | shota.jolbordi@iohk.io | IOG |
-| Kranium Mendoza    | womfoo  | Maintainer |            | kraniumau          | kraniumgikos.mendoza@iohk.io | IOG |
 | Yurii Shynbuiev    | yshyn-iohk | Maintainer |         | yuriishynbuiev     | yurii.shynbuiev@iohk.io | IOG |
-
+| Fabio Pinheiro     | FabioPinheiro | Maintainer |      | fmgp               | fabio.pinheiro@iohk.io | IOG |
+| Benjamin Voiturier | bvoiturier | Maintainer |         | bvoiturier         | benjamin.voiturier@iohk.io | IOG |
+| Curtis Harding     | curtis-h | Maintainer |           | _                  | curtis.harding@iohk.io | IOG |
+| Goncalo Frade      | goncalo-frade-iohk | Maintainer | | goncalofrade_20576 | goncalo.frade@iohk.io | IOG |
+| Shailesh Patil     | mineme0110 | Maintainer |         | mineme110          | shailesh.patil@iohk.io | IOG |
+| Björn Sandmann     | bsandmann | Maintainer |          | bjoernsandmann     | sandmann@codedata.solutions | Blocktrust |
+| Mix Irvin          | mixmix | Maintainer | | mixmix | | Ahau |
 
 ## Emeritus Maintainers
 
 | Name | GitHub ID | Scope | LFID | Discord ID | Email | Company Affiliation |
 |----- | --------- | ----- | ---- | ---------- | ----- | ------------------- |
 | Anton Baliasnikov | antonbaliasnikov | Maintainer | | | | |
-| Ahmed Moussa      | hamada147        | Maintainer | | | | |                           
+| Ahmed Moussa      | hamada147        | Maintainer | | | | |   
+| Timothy Wells      | blockchaintimothy | Maintainer |  | timw_01400 |  |  | 
+| Cristian Gonzalez  | cristianIOHK | Maintainer |       | chet_to            |  |  |
+| Dale Peek          | Dale-iohk | Maintainer |          | dale.doe           |  |  |
+| Bassam Riman       | CryptoKnightIOG | Maintainer |    | _                  |  |  |
+| David Poltorak     | davepoltorak | Maintainer |       | davidpoltorak_io   |  |  |
+| Esteban Garcia     | essbante-io | Maintainer |        | essbante           |  |  |
+| Ezequiel Postan    | EzequielPostan | Maintainer |     | _                  |  |  |
+| Fayyaadh Adams     | FayyaadhAdams | Maintainer |      | .fayyaadh          |  |  |
+| Lohan Spies        | lohanspies | Maintainer |         | _                  |  |  |
+| Milos Backonja     | milosbackonja | Maintainer |      | _                  |  |  |
+| Miloš Džepina      | milosh86 | Maintainer |           | milosdz_60141      |  |  |
+| Michael Breuninger | mkbreuningIOHK | Maintainer |     | mkbreuning_45483   |  |  |
+| Pat Losoponkul     | patlo-iog | Maintainer |          | _pat_pat           |  |  |
+| Peter Vielhaber    | petevielhaber | Maintainer |      | petev_iog          |  |  |
+| Shota Jolbordi     | shotexa | Maintainer |            | xesus1337          |  |  |
+| Kranium Mendoza    | womfoo  | Maintainer |            | kraniumau          |  |  |
+
+
 ## The Duties of a Maintainer
 
 The expectation is for maintainers to perform the following duties for this repository. The responsibilities listed are in high to low-priority order:
