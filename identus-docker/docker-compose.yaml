@@ -1,0 +1,127 @@
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_MULTIPLE_DATABASES: "pollux,connect,agent,node_db"
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - pg_data_db:/var/lib/postgresql/data
+      - ./postgres-init-script.sh:/docker-entrypoint-initdb.d/init-script.sh
+      - ./postgres-max_conns.sql:/docker-entrypoint-initdb.d/max_conns.sql
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U", "postgres", "-d", "agent" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  prism-node:
+    image: ghcr.io/input-output-hk/prism-node:2.4.1
+    environment:
+      NODE_PSQL_HOST: db:5432
+      NODE_REFRESH_AND_SUBMIT_PERIOD:
+      NODE_MOVE_SCHEDULED_TO_PENDING_PERIOD:
+      NODE_WALLET_MAX_TPS:
+        # NODE_PSQL_USERNAME: postgres
+        # NODE_PSQL_HOST: database-prism-node.cluster-cv1pad4ulozd.eu-central-1.rds.amazonaws.com:5432
+        # NODE_PSQL_PASSWORD: Gu3sa7hJEIu4URQSZcH4
+        # NODE_PSQL_DATABASE: postgres
+    depends_on:
+      db:
+        condition: service_healthy
+
+  cloud-agent:
+    image: ghcr.io/hyperledger/identus-cloud-agent:1.40.0
+    ports:
+      - "8085:8085" # API endpoint
+      - "8090:8090" # DIDComm endpoint
+    environment:
+      POLLUX_DB_HOST: db
+      POLLUX_DB_PORT: 5432
+      POLLUX_DB_NAME: pollux
+      POLLUX_DB_USER: postgres
+      POLLUX_DB_PASSWORD: postgres
+      CONNECT_DB_HOST: db
+      CONNECT_DB_PORT: 5432
+      CONNECT_DB_NAME: connect
+      CONNECT_DB_USER: postgres
+      CONNECT_DB_PASSWORD: postgres
+      AGENT_DB_HOST: db
+      AGENT_DB_PORT: 5432
+      AGENT_DB_NAME: agent
+      AGENT_DB_USER: postgres
+      AGENT_DB_PASSWORD: postgres
+      PRISM_NODE_HOST: prism-node
+      PRISM_NODE_PORT: 50053
+      POLLUX_STATUS_LIST_REGISTRY_PUBLIC_URL: http://cloud-agent:8085
+      DIDCOMM_SERVICE_URL: http://cloud-agent:8090
+      REST_SERVICE_URL: http://cloud-agentl:8085
+      # VAULT_ADDR:
+      # VAULT_TOKEN:
+      SECRET_STORAGE_BACKEND: postgres
+      DEV_MODE: true
+      # DEFAULT_WALLET_ENABLED:
+      # DEFAULT_WALLET_SEED:
+      # DEFAULT_WALLET_WEBHOOK_URL:
+      # DEFAULT_WALLET_WEBHOOK_API_KEY:
+      # DEFAULT_WALLET_AUTH_API_KEY:
+      # GLOBAL_WEBHOOK_URL:
+      # GLOBAL_WEBHOOK_API_KEY:
+      # WEBHOOK_PARALLELISM:
+      # ADMIN_TOKEN:
+      # API_KEY_SALT:
+      API_KEY_ENABLED: false
+      # API_KEY_AUTHENTICATE_AS_DEFAULT_USER:
+      # API_KEY_AUTO_PROVISIONING:
+    depends_on:
+      db:
+        condition: service_healthy
+      prism-node:
+        condition: service_started
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://cloud-agent:8085/_system/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  ################
+  ### MEDIATOR ###
+  ################
+
+  mongo:
+    image: mongo:6.0
+    ports:
+      - "27017:27017"
+    command: [ "--auth" ]
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=admin
+      - MONGO_INITDB_DATABASE=mediator
+    volumes:
+      - ./mongo-initdb.js:/docker-entrypoint-initdb.d/initdb.js
+
+  identus-mediator:
+    image: ghcr.io/hyperledger/identus-mediator:1.0.0
+    ports:
+      - "8080:8080"
+    environment:
+      # Creates the identity:
+      # These keys are for demo purpose only for production deployments generate keys
+      # Please follow the README file in the Mediator repository for guidelines on How to generate JWK format keys
+      # KEY_AGREEMENT KEY_AUTHENTICATION are using format JOSE(JWK) OKP type base64urlsafe encoded keys
+      - KEY_AGREEMENT_D=Z6D8LduZgZ6LnrOHPrMTS6uU2u5Btsrk1SGs4fn8M7c
+      - KEY_AGREEMENT_X=Sr4SkIskjN_VdKTn0zkjYbhGTWArdUNE4j_DmUpnQGw
+      - KEY_AUTHENTICATION_D=INXCnxFEl0atLIIQYruHzGd5sUivMRyQOzu87qVerug
+      - KEY_AUTHENTICATION_X=MBjnXZxkMcoQVVL21hahWAw43RuAG-i64ipbeKKqwoA
+      - SERVICE_ENDPOINTS=http://identus-mediator:8080;ws://identus-mediator:8080/ws
+      - MONGODB_USER=admin
+      - MONGODB_PASSWORD=admin
+      - MONGODB_PROTOCOL=mongodb
+      - MONGODB_HOST=mongo
+      - MONGODB_PORT=27017
+      - MONGODB_DB_NAME=mediator
+    depends_on:
+      - "mongo"
+
+volumes:
+  pg_data_db:
