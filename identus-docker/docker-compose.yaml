@@ -55,7 +55,7 @@ services:
       PRISM_NODE_PORT: 50053
       POLLUX_STATUS_LIST_REGISTRY_PUBLIC_URL: http://cloud-agent:8085
       DIDCOMM_SERVICE_URL: http://cloud-agent:8090
-      REST_SERVICE_URL: http://cloud-agentl:8085
+      REST_SERVICE_URL: http://cloud-agent:8085
       # VAULT_ADDR:
       # VAULT_TOKEN:
       SECRET_STORAGE_BACKEND: postgres
