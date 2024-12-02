@@ -16,7 +16,7 @@ services:
       retries: 5
 
   prism-node:
-    image: ghcr.io/input-output-hk/prism-node:2.4.1
+    image: docker.io/identus/prism-node:2.5.0
     environment:
       NODE_PSQL_HOST: db:5432
       NODE_REFRESH_AND_SUBMIT_PERIOD:
@@ -31,7 +31,7 @@ services:
         condition: service_healthy
 
   cloud-agent:
-    image: ghcr.io/hyperledger/identus-cloud-agent:1.40.0
+    image: docker.io/identus/identus-cloud-agent:1.40.0
     ports:
       - "8085:8085" # API endpoint
       - "8090:8090" # DIDComm endpoint
@@ -101,7 +101,7 @@ services:
       - ./mongo-initdb.js:/docker-entrypoint-initdb.d/initdb.js
 
   identus-mediator:
-    image: ghcr.io/hyperledger/identus-mediator:1.0.0
+    image: docker.io/identus/identus-mediator:1.0.0
     ports:
       - "8080:8080"
     environment:
