@@ -74,6 +74,28 @@ The port `8085` should not be publicly accessible.
 
 Other Docker network drivers, like `macvlan`, could be useful for running multiple instances for testing purposes, making them appear as different machines on your local network. However, these drivers are not supported on Docker Desktop for Mac and Windows.
 
----
+## Troubleshoot
 
-Let me know if there are any specific adjustments or additional sections you'd like to add!
+### Mac M4 / Docker / Java Bug - (No Java detected)
+
+If you see the following message `No java installations was detected.` when starting docker compose on a Mac with the M4 CPU. There is a problem and a workaround for it.
+For more information check the [issues](https://github.com/hyperledger/identus-cloud-agent/issues/1482)
+
+The workaround is to disable CPU's vector extensions. So we need to create a new docker image based on the previous one.
+We do that on the [Dockerfile](./identus-docker/cloud-agent-M4-workaround/Dockerfile) (for version 1.40.0) where we hard-code the workaround.
+
+So on your docker compose file [docker-compose.yaml](identus-docker/docker-compose.yaml) you need to use the new image we just created.
+By changing the following:
+
+- From
+  ```
+    image: docker.io/identus/identus-cloud-agent:1.40.0
+    # build: ./cloud-agent-M4-workaround
+  ```
+- To
+  ```
+    # image: docker.io/identus/identus-cloud-agent:1.40.0
+    build: ./cloud-agent-M4-workaround
+  ```
+
+We recommended way of running docker compose `docker compose up --build --remove-orphans --force-recreate` (just to be extra sure there is no confusion with caches)

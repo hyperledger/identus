@@ -32,10 +32,12 @@ services:
 
   cloud-agent:
     image: docker.io/identus/identus-cloud-agent:1.40.0
+    # build: ./cloud-agent-M4-workaround # Workaround for the M4 see https://github.com/hyperledger/identus-cloud-agent/issues/1482
     ports:
       - "8085:8085" # API endpoint
       - "8090:8090" # DIDComm endpoint
     environment:
+      JAVA_OPTS: "-XX:UseSVE=0"
       POLLUX_DB_HOST: db
       POLLUX_DB_PORT: 5432
       POLLUX_DB_NAME: pollux
