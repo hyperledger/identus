@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  /* Removed conflicting dark theme colors - let Tailwind handle styling */
+}
+
+
+.flowchart-link {
+  stroke-dasharray: 4,4 !important;
+  animation: flow 1s linear infinite;
+}
+
+@keyframes flow {
+  from {
+    stroke-dashoffset: 16;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+

@@ -54,8 +54,8 @@ const Agent: React.FC = () => {
   ];
 
   /**
-   * Create a new Prism DID master key using the Identus Edge Agent SDK.
-   */
+  * Create a new Prism DID master key using the Identus Edge Agent SDK.
+  */
   async function onCreateMasterKey() {
     const apollo = new SDK.Apollo();
     const castor = new SDK.Castor(apollo);
@@ -64,33 +64,33 @@ const Agent: React.FC = () => {
       curve: SDK.Domain.Curve.SECP256K1,
       seed: Buffer.from(apollo.createRandomSeed().seed.value).toString("hex"),
     });
-     // 1) Create a DID from the masterKey
-     const did = await castor.createPrismDID(masterSK.publicKey());
-     console.log("Transaction DID:", did.toString());
+    // 1) Create a DID from the masterKey
+    const did = await castor.createPrismDID(masterSK.publicKey());
+    console.log("Transaction DID:", did.toString());
 
-     const shortForm = did.toString().split(":").slice(0, 3).join(":");
-     setShortFormDid(shortForm);
-     setDid(did.toString());
-     setMasterKey(masterSK);
+    const shortForm = did.toString().split(":").slice(0, 3).join(":");
+    setShortFormDid(shortForm);
+    setDid(did.toString());
+    setMasterKey(masterSK);
   }
 
   /**
-   * Chunk a large string into smaller parts (used for storing DID data in metadata).
-   */
+  * Chunk a large string into smaller parts (used for storing DID data in metadata).
+  */
   function splitStringIntoChunks(input: Uint8Array, chunkSize = 64): Uint8Array[] {
     const buffer = Buffer.from(input);
     const chunks: Uint8Array[] = [];
     for (let i = 0; i < buffer.length; i += chunkSize) {
       chunks.push(
-       Uint8Array.from(buffer.slice(i, i + chunkSize))
+      Uint8Array.from(buffer.slice(i, i + chunkSize))
       );
     }
     return chunks;
   }
 
   /**
-   * Check for transaction confirmation on-chain by hitting Blockfrost.
-   */
+  * Check for transaction confirmation on-chain by hitting Blockfrost.
+  */
   async function checkTransactionConfirmation(txHash: string) {
     try {
       const response = await fetch(
@@ -108,8 +108,8 @@ const Agent: React.FC = () => {
   }
 
   /**
-   * Build and submit a transaction using Mesh.
-   */
+  * Build and submit a transaction using Mesh.
+  */
   async function buildAndSubmitTransaction(metadataBody: any): Promise<string> {
     if (!wallet) throw new Error("No wallet connected");
     // Create a new transaction with the "initiator" set to the connected wallet
@@ -131,8 +131,8 @@ const Agent: React.FC = () => {
   }
 
   /**
-   * Orchestrates DID creation & transaction submission flow.
-   */
+  * Orchestrates DID creation & transaction submission flow.
+  */
   async function onPublishDID() {
     if (!masterKey) {
       return alert("Please create a master key first");
@@ -153,7 +153,7 @@ const Agent: React.FC = () => {
       const apollo = new SDK.Apollo();
       const castor = new SDK.Castor(apollo);
 
-     
+
       // 2) Build the Atala Prism DID object
       const atalaObject = await castor.createPrismDIDAtalaObject(
         masterKey,

@@ -138,7 +138,7 @@ const castor = new SDK.Castor(apollo, extraResolvers)
 const agent = await SDK.Agent.initialize({
     apollo,
     castor,
-    mediatorDID, 
+    mediatorDID,
     pluto: new SDK.Pluto(store, apollo),
     seed: defaultSeed
 });

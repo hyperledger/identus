@@ -39,14 +39,14 @@ The name `cloud-agent` is also the hostname of the Cloud Agent's Docker instance
 
 We use that hostname for Out-of-Band (OOB) invitations and other tasks by configuring environment variables as follows:
 
-```
+```text
 DIDCOMM_SERVICE_URL: http://cloud-agent:8090
 REST_SERVICE_URL: http://cloud-agent:8085
 ```
 
 The same applies to the Identus Mediator, using the following environment variable:
 
-```
+```text
 SERVICE_ENDPOINTS=http://identus-mediator:8080;ws://identus-mediator:8080/ws
 ```
 
@@ -56,8 +56,8 @@ SERVICE_ENDPOINTS=http://identus-mediator:8080;ws://identus-mediator:8080/ws
 
 To use the OOB invitation, the names must be resolvable. If you are running or developing an application on the host machine, it's necessary to define those names. The easiest way to achieve this is by adding entries to the `/etc/hosts` file, like so:
 
-```
-127.0.0.1	localhost cloud-agent identus-mediator
+```text
+127.0.0.1 localhost cloud-agent identus-mediator
 ```
 
 ### Ports
@@ -82,19 +82,22 @@ If you see the following message `No java installations was detected.` when star
 For more information check the [issues](https://github.com/hyperledger/identus-cloud-agent/issues/1482)
 
 The workaround is to disable CPU's vector extensions. So we need to create a new docker image based on the previous one.
-We do that on the [Dockerfile](./identus-docker/cloud-agent-M4-workaround/Dockerfile) (for version 1.40.0) where we hard-code the workaround.
+We do that on the [Dockerfile](./identus-docker/cloud-agent-M4-workaround/Dockerfile) (for version 2.2.0) where we hard-code the workaround.
 
 So on your docker compose file [docker-compose.yaml](identus-docker/docker-compose.yaml) you need to use the new image we just created.
 By changing the following:
 
 - From
-  ```
-    image: docker.io/identus/identus-cloud-agent:1.40.0
+
+  ```yaml
+    image: docker.io/hyperledgeridentus/identus-cloud-agent:2.2.0
     # build: ./cloud-agent-M4-workaround
   ```
+
 - To
-  ```
-    # image: docker.io/identus/identus-cloud-agent:1.40.0
+
+  ```yaml
+    # image: docker.io/hyperledgeridentus/identus-cloud-agent:2.2.0
     build: ./cloud-agent-M4-workaround
   ```
 

@@ -249,7 +249,7 @@ async function verifyCondition(callback) {
         for (const message of messages) {
             if (message instanceof SDK.Domain.Message) {
                 if (message.piuri === SDK.ProtocolType.DidcommOfferCredential) {
-                    /** 
+                    /**
                      * DIDComm Offer Credential Message
                      * Specification: https://didcomm.org/issue-credential/3.0/offer-credential
                      * Description: The credential offer contains a preview of the SDJWT credential and would inform
@@ -262,7 +262,7 @@ async function verifyCondition(callback) {
                     const requestMessage = requestCredential.makeMessage()
                     await agent.sendMessage(requestMessage);
                 } else if (message.piuri === SDK.ProtocolType.DidcommIssueCredential) {
-                    /** 
+                    /**
                      * DIDComm Issue Credential Message
                      * Specification: https://didcomm.org/issue-credential/3.0/issue-credential
                      * Description: This is the Issued Credential which gets stored inside the Identus Storage for later use.
@@ -296,10 +296,10 @@ async function verifyCondition(callback) {
                         await agent.acceptInvitation(parsed, 'SamplePresentationRequestOOB');
                     }
                 } else if (message.piuri === SDK.ProtocolType.DidcommRequestPresentation) {
-                    /** 
+                    /**
                      * DIDComm Request Presentation Message
                      * Specification: https://didcomm.org/present-proof/3.0/request-presentation
-                     * Description: A presentation request message is sent by the Verifier and requests the holder a Credential Presentation 
+                     * Description: A presentation request message is sent by the Verifier and requests the holder a Credential Presentation
                      * for specific claims
                      */
                     console.log('Presentation Request:', message);

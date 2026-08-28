@@ -28,7 +28,7 @@ body:
     attributes:
       label: Components
       placeholder: Component names
-      description: List the components affected by the scope of this work  
+      description: List the components affected by the scope of this work
     validations:
       required: true
   - type: textarea

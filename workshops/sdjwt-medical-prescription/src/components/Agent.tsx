@@ -11,4 +11,4 @@ import { store } from "../reducers/store";
 export const MountSDK = (props: any) => {
     const { children } = props;
     return <Provider store={store}>{children}</Provider>
-}   
+}

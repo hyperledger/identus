@@ -21,9 +21,7 @@ Intakes](#report-intakes).
 
 This document has the following sections:
 
-- [Hyperledger Identus Security Policy](#hyperledger-project-security-policy)
-  - [Instructions](#instructions)
-  - [About this document](#about-this-document)
+- [About this document](#about-this-document)
   - [Outline](#outline)
   - [What Is a Vulnerability Disclosure Policy?](#what-is-a-vulnerability-disclosure-policy)
   - [Security Team](#security-team)
@@ -52,11 +50,10 @@ contributors have agreed to follow.
 
 The current Hyperledger Identus security team is:
 
-| Name             | Email ID           | Discord ID | Area/Specialty  |
-| ---------------- | ------------------ | ---------- | --------------- |
-| Dale Peek        | dale.peek@iohk.io  | Dale-iohk  | Everything      |
-| Javier Labrador  | javier.ribo@iohk.io| elribonazo | Everything      |
-| Yurii Shynbuiev  | shynbuiev@iohk.io  | yshyn-iohk | Everything      |
+| Name            | Email ID               | Discord ID | Area/Specialty |
+| --------------- | ---------------------- | ---------- | -------------- |
+| Javier Labrador | <javier.ribo@iohk.io>  | elribonazo | Everything     |
+| Yurii Shynbuiev | <shynbuiev@iohk.io>    | yshyn-iohk | Everything     |
 
 The security team for Hyperledger Identus must include at least three project
 Maintainers that agree to carry out the following duties and responsibilities.
@@ -88,8 +85,6 @@ negotiated with the reporter and must not be longer than 90 days.
 4. If necessary, create a private patch development infrastructure for the issue
    by emailing the [Hyperledger Community Architects].
 
-[Hyperledger Community Architects]: mailto:community-architects@hyperledger.org
-
 5. Request a CVE for the issue (see the [CNA/CVE Reporting](#cnacve-reporting)
    section).
 
@@ -97,13 +92,15 @@ negotiated with the reporter and must not be longer than 90 days.
    the embargo period ends.
 
 7. If applicable, notify members of the embargo list of the vulnerability,
-upcoming patch and release, as described above.
+   upcoming patch and release, as described above.
 
 8. Publish a new (software) release in which the vulnerability is addressed.
 
 9. Publicly disclose the issue within 48 hours after the release via a
-GitHub security advisory (see the [(GitHub) Security
-Advisories](#github-security-advisories) section for details).
+   GitHub security advisory (see the [(GitHub) Security
+   Advisories](#github-security-advisories) section for details).
+
+[Hyperledger Community Architects]: mailto:community-architects@hyperledger.org
 
 ## Discussion Forums
 

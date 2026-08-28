@@ -138,7 +138,7 @@ agent.addListener(SDK.ListenerKey.MESSAGE, async (messages) => {
     for (const message of messages) {
         if (message.piuri === SDK.ProtocolType.DidcommOfferCredential) {
             console.log('Credential Offer:', message);
-        } 
+        }
     }
 });`, language: 'typescript'
                 }} />

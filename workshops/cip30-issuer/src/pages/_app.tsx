@@ -11,6 +11,6 @@ function App({ Component, pageProps }: AppProps) {
       </MeshProvider>
     );
   }
-  
+
 
 export default App;

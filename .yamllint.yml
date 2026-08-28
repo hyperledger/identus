@@ -1,0 +1,29 @@
+---
+extends: default
+
+rules:
+  # Allow long lines (common in CI workflows and docker-compose)
+  line-length: disable
+
+  # Allow truthy values like 'on' (used in GitHub Actions triggers)
+  truthy:
+    allowed-values: ["true", "false", "yes", "no", "on"]
+
+  # Relaxed comment indentation
+  comments-indentation: disable
+
+  # Allow YAML files without document start marker (---)
+  document-start: disable
+
+  # Allow spaces inside brackets (common in Docker Compose port mappings)
+  brackets:
+    min-spaces-inside: 0
+    max-spaces-inside: 1
+
+  # Relax comment spacing (allow 1 space before inline comments)
+  comments:
+    min-spaces-from-content: 1
+
+ignore: |
+  .claude/
+  node_modules/

@@ -9,21 +9,24 @@
 <hr>
 
 # Introduction
+
 This workshop will show you how to Issue and Verify a SD-JWT Credential and Presentation using connectionless flows, meaning, you won't need to establish a didcomm connection between the Issuer, Holder and Verifier.
 
-### **What Can I expect from this workshop?**
+## What Can I Expect From This Workshop?
 
 You will learn everything that is needed to receive an Issued SD-JWT credential from the Cloud Agent and then use this credential to respond to a Presentation Submission request.
 
-### **What are connectionless flows?**
+## What Are Connectionless Flows?
 
 In this presentation we won't be using [DIDComm Connections](https://hyperledger.github.io/identus-docs/docs/concepts/multi-tenancy#didcomm-connections) but instead we will generate Out of Band (OOB) codes for Issuance and Verification.
 
 You will then receive and process this OOB in your Edge Agent and run the corresponding flow:
+
 1. Create the Credential Request from the Credential Offer
 2. Create the Presentation Submission from the Verification Request
 
-### Components
+## Components
+
 All documentation on how to deploy each service is inside the workshop just open the project and copy the commands:
 
 1. Cloud Agent
@@ -51,4 +54,4 @@ npm i
 npm run dev
 ```
 
-**This create a site on http://localhost:3000, open the link and continue with the on screen instructions to continue the workshop**
+**This create a site on <http://localhost:3000>, open the link and continue with the on screen instructions to continue the workshop**

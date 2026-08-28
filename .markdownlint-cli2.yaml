@@ -1,0 +1,9 @@
+# markdownlint-cli2 configuration
+# https://github.com/DavidAnson/markdownlint-cli2
+
+# Ignore patterns
+ignores:
+  - ".claude/**"
+  - "**/node_modules/**"
+  - "**/target/**"
+  - "**/build/**"

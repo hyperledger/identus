@@ -1,0 +1,11 @@
+# style: auto-fix and manually resolve all lint errors across the repo
+# Mass formatting — markdownlint, yamllint. No logic changes.
+051c503869dc03a1c58fdec49b26343b8bec1ee1
+
+# style: fix editorconfig violations across the repo
+# Tabs to spaces, trailing whitespace, indentation fixes. No logic changes.
+faca6c6e3e396567b56c09e4681823c3950160e3
+
+# style: fix editorconfig violations across the repo
+# Trailing whitespace, indentation fixes. No logic changes.
+1f7b341c710687c702595b994bc9787da138a23d

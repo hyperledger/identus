@@ -4,50 +4,57 @@
 
 Maintainers are assigned the following scopes in this repository:
 
-| Scope | Definition | GitHub Role | GitHub Team |
-| ----- | ---------- | ----------- | ----------- |
-| Maintainer | The GitHub Maintain role | Maintain   | `identus-maintainers`     |
+| Scope      | Definition               | GitHub Role | GitHub Team           |
+| ---------- | ------------------------ | ----------- | --------------------- |
+| Maintainer | The GitHub Maintain role | Maintain    | `identus-maintainers` |
 
 ## Active Maintainers
 
 <!-- Please keep this sorted alphabetically by github -->
 
-| Name | GitHub ID | Scope | LFID | Discord ID | Email | Company Affiliation |
-|----- | --------- | ----- | ---- | ---------- | ----- | ------------------- |
-| Allain Magyar      | amagyar-iohk  | Maintainer |      | _                  | allain.magyar@iohk.io | IOG |
-| Javier Labrador    | elribonazo | Maintainer |         | elribonazo         | javier.ribo@iohk.io | IOG |
-| Yurii Shynbuiev    | yshyn-iohk | Maintainer |         | yuriishynbuiev     | yurii.shynbuiev@iohk.io | IOG |
-| Fabio Pinheiro     | FabioPinheiro | Maintainer |      | fmgp               | fabio.pinheiro@iohk.io | IOG |
-| Benjamin Voiturier | bvoiturier | Maintainer |         | bvoiturier         | benjamin.voiturier@iohk.io | IOG |
-| Curtis Harding     | curtis-h | Maintainer |           | _                  | curtis.harding@iohk.io | IOG |
-| Goncalo Frade      | goncalo-frade-iohk | Maintainer | | goncalofrade_20576 | goncalo.frade@iohk.io | IOG |
-| Shailesh Patil     | mineme0110 | Maintainer |         | mineme110          | shailesh.patil@iohk.io | IOG |
-| Björn Sandmann     | bsandmann | Maintainer |          | bjoernsandmann     | sandmann@codedata.solutions | Blocktrust |
-| Mix Irvin          | mixmix | Maintainer | | mixmix | | Ahau |
+| Name               | GitHub ID          | Scope      | LFID | Discord ID         | Email                         | Company Affiliation |
+| ------------------ | ------------------ | ---------- | ---- | ------------------ | ----------------------------- | ------------------- |
+| Allain Magyar      | amagyar-iohk       | Maintainer |      |                    | <allain.magyar@iohk.io>       | IOG                 |
+| Bernokl            | bernokl            | Maintainer |      |                    |                               |                     |
+| Fabio Pinheiro     | FabioPinheiro      | Maintainer |      | fmgp               | <fabio.pinheiro@iohk.io>      | IOG                 |
+| Goncalo Frade      | goncalo-frade-iohk | Maintainer |      | goncalofrade_20576 | <goncalo.frade@iohk.io>       | IOG                 |
+| Javier Labrador    | elribonazo         | Maintainer |      | elribonazo         | <javier.ribo@iohk.io>         | IOG                 |
+| Jesus Diaz Vico    | jesusdiazvico      | Maintainer |      |                    |                               |                     |
+| Jon Bauer          | coveloper          | Maintainer |      |                    | <jon@covelop.org>             |                     |
+| Jon P              | pparker            | Maintainer |      |                    |                               |                     |
+| Nate Strang        | natestrang-iohk    | Maintainer |      |                    |                               | IOG                 |
+| Pat Losoponkul     | patextreme         | Maintainer |      | _pat_pat           |                               |                     |
+| Roberto Carvajal   | robertocarvajal    | Maintainer |      |                    |                               |                     |
+| Shailesh Patil     | mineme0110         | Maintainer |      | mineme110          | <shailesh.patil@iohk.io>      | IOG                 |
+| Teodora            | TeoSL87            | Maintainer |      |                    |                               |                     |
+| Yurii Shynbuiev    | yshyn-iohk         | Maintainer |      | yuriishynbuiev     | <yurii.shynbuiev@iohk.io>     | IOG                 |
+| Yummy-Yums         | Yummy-Yums         | Maintainer |      |                    |                               |                     |
 
 ## Emeritus Maintainers
 
-| Name | GitHub ID | Scope | LFID | Discord ID | Email | Company Affiliation |
-|----- | --------- | ----- | ---- | ---------- | ----- | ------------------- |
-| Anton Baliasnikov | antonbaliasnikov | Maintainer | | | | |
-| Ahmed Moussa      | hamada147        | Maintainer | | | | |   
-| Timothy Wells      | blockchaintimothy | Maintainer |  | timw_01400 |  |  | 
-| Cristian Gonzalez  | cristianIOHK | Maintainer |       | chet_to            |  |  |
-| Dale Peek          | Dale-iohk | Maintainer |          | dale.doe           |  |  |
-| Bassam Riman       | CryptoKnightIOG | Maintainer |    | _                  |  |  |
-| David Poltorak     | davepoltorak | Maintainer |       | davidpoltorak_io   |  |  |
-| Esteban Garcia     | essbante-io | Maintainer |        | essbante           |  |  |
-| Ezequiel Postan    | EzequielPostan | Maintainer |     | _                  |  |  |
-| Fayyaadh Adams     | FayyaadhAdams | Maintainer |      | .fayyaadh          |  |  |
-| Lohan Spies        | lohanspies | Maintainer |         | _                  |  |  |
-| Milos Backonja     | milosbackonja | Maintainer |      | _                  |  |  |
-| Miloš Džepina      | milosh86 | Maintainer |           | milosdz_60141      |  |  |
-| Michael Breuninger | mkbreuningIOHK | Maintainer |     | mkbreuning_45483   |  |  |
-| Pat Losoponkul     | patlo-iog | Maintainer |          | _pat_pat           |  |  |
-| Peter Vielhaber    | petevielhaber | Maintainer |      | petev_iog          |  |  |
-| Shota Jolbordi     | shotexa | Maintainer |            | xesus1337          |  |  |
-| Kranium Mendoza    | womfoo  | Maintainer |            | kraniumau          |  |  |
-
+| Name               | GitHub ID         | Scope      | LFID | Discord ID       | Email                         | Company Affiliation |
+| ------------------ | ----------------- | ---------- | ---- | ---------------- | ----------------------------- | ------------------- |
+| Ahmed Moussa       | hamada147         | Maintainer |      |                  |                               |                     |
+| Anton Baliasnikov  | antonbaliasnikov  | Maintainer |      |                  |                               |                     |
+| Bassam Riman       | CryptoKnightIOG   | Maintainer |      |                  |                               |                     |
+| Benjamin Voiturier | bvoiturier        | Maintainer |      | bvoiturier       | <benjamin.voiturier@iohk.io>  | IOG                 |
+| Björn Sandmann     | bsandmann         | Maintainer |      | bjoernsandmann   | <sandmann@codedata.solutions> | Blocktrust          |
+| Cristian Gonzalez  | cristianIOHK      | Maintainer |      | chet_to          |                               |                     |
+| Curtis Harding     | curtis-h          | Maintainer |      |                  | <curtis.harding@iohk.io>      | IOG                 |
+| Dale Peek          | Dale-iohk         | Maintainer |      | dale.doe         |                               |                     |
+| David Poltorak     | davepoltorak      | Maintainer |      | davidpoltorak_io |                               |                     |
+| Esteban Garcia     | essbante-io       | Maintainer |      | essbante         |                               |                     |
+| Ezequiel Postan    | EzequielPostan    | Maintainer |      |                  |                               |                     |
+| Fayyaadh Adams     | FayyaadhAdams     | Maintainer |      | .fayyaadh        |                               |                     |
+| Kranium Mendoza    | womfoo            | Maintainer |      | kraniumau        |                               |                     |
+| Lohan Spies        | lohanspies        | Maintainer |      |                  |                               |                     |
+| Michael Breuninger | mkbreuningIOHK    | Maintainer |      | mkbreuning_45483 |                               |                     |
+| Milos Backonja     | milosbackonja     | Maintainer |      |                  |                               |                     |
+| Miloš Džepina      | milosh86          | Maintainer |      | milosdz_60141    |                               |                     |
+| Mix Irvin          | mixmix            | Maintainer |      | mixmix           |                               | Ahau                |
+| Peter Vielhaber    | petevielhaber     | Maintainer |      | petev_iog        |                               |                     |
+| Shota Jolbordi     | shotexa           | Maintainer |      | xesus1337        |                               |                     |
+| Timothy Wells      | blockchaintimothy | Maintainer |      | timw_01400       |                               |                     |
 
 ## The Duties of a Maintainer
 
@@ -89,14 +96,14 @@ A PR has been created to update this file and add the proposed maintainer to the
 - An approval timeframe begins once the PR and necessary comments are received.
 - The PR **MUST** be communicated on all appropriate channels, including relevant community calls, chat channels, and mailing lists. The community's comments of support are welcome.
 - The PR gets merged, and the proposed maintainer becomes a maintainer if either:
- - Two weeks have passed since the receipt of at least three (3) Maintainer PR approvals, OR
-  - An absolute majority of maintainers have approved the PR.
+- Two weeks have passed since the receipt of at least three (3) Maintainer PR approvals, OR
+- An absolute majority of maintainers have approved the PR.
 - It may be closed if the PR does not get the requisite PR approvals.
 - Once the add maintainer PR merges, any updates to the GitHub Teams are made.
 
 ## Removing Maintainers
 
-Being a maintainer is not a status symbol or a title or indefinite. 
+Being a maintainer is not a status symbol or a title or indefinite.
 Moving the maintainer to emeritus status will occasionally be necessary and appropriate.
 The status change can occur in the following situations:
 
@@ -117,9 +124,9 @@ resignation, the Pull Request is mergeable following a maintainer PR approval. I
 - The PR is authored by or has a comment supporting the proposal from an existing maintainer or Hyperledger GitHub organization administrator.
 - The approval timeframe begins upon receipt of the PR and necessary comments.
 - The PR **MAY** be communicated on appropriate channels, including relevant community calls, chat channels, and mailing lists.
-- The PR gets merged, and the maintainer transitions to maintainer emeritus if: 
-  - The PR gets approval from the maintainer to transition, OR 
-  - Two weeks have passed since receipt of at least three (3) Maintainer PR approvals, OR 
+- The PR gets merged, and the maintainer transitions to maintainer emeritus if:
+  - The PR gets approval from the maintainer to transition, OR
+  - Two weeks have passed since receipt of at least three (3) Maintainer PR approvals, OR
   - An absolute majority of maintainers have approved the PR.
 - It may be closed if the PR does not get the requisite PR approvals.
 
