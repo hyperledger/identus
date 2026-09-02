@@ -1,10 +1,7 @@
 name: Lint
-
-on:
-  pull_request:
-  push:
-    branches: [main]
-
+on: [pull_request, push]
 jobs:
   lint:
-    uses: hyperledger-identus/.github/.github/workflows/lint-files.yml@f2c9e417fa46f69b015a9cdbaafdfb9e52e4ed60 # main
+    uses: ./.github/workflows/lint-files.yml
+    with:
+      run-sql-lint: true

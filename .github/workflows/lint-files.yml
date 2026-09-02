@@ -1,0 +1,115 @@
+name: Lint Files
+
+on:
+  workflow_call:
+    inputs:
+      run-sql-lint:
+        description: "Run SQLFluff"
+        type: boolean
+        default: false
+      run-ktlint:
+        description: "Run ktlint"
+        type: boolean
+        default: false
+      run-swift-lint:
+        description: "Run SwiftLint"
+        type: boolean
+        default: false
+      run-eslint:
+        description: "Run ESLint"
+        type: boolean
+        default: false
+
+jobs:
+  file-hygiene:
+    name: File Hygiene (editorconfig)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: EditorConfig Checker
+        uses: editorconfig-checker/action-editorconfig-checker@main
+
+  shell-lint:
+    name: Shell Scripts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: ShellCheck
+        uses: ludeeus/action-shellcheck@master
+        with:
+          severity: warning
+
+  markdown-lint:
+    name: Markdown
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: markdownlint
+        uses: DavidAnson/markdownlint-cli2-action@v19
+        with:
+          globs: "**/*.md"
+
+  yaml-lint:
+    name: YAML
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: yamllint
+        uses: frenck/action-yamllint@v1
+
+  secret-scan:
+    name: Secret Scanning
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  sql-lint:
+    name: SQL
+    runs-on: ubuntu-latest
+    if: ${{ inputs.run-sql-lint }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: SQLFluff
+        uses: yu-iskw/action-sqlfluff@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+          dialect: "postgres"
+          paths: "."
+
+  ktlint:
+    name: Kotlin
+    runs-on: ubuntu-latest
+    if: ${{ inputs.run-ktlint }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: ktlint
+        uses: ScaCap/action-ktlint@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+
+  swift-lint:
+    name: Swift
+    runs-on: ubuntu-latest
+    if: ${{ inputs.run-swift-lint }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: SwiftLint
+        uses: norio-nomura/action-swiftlint@master
+
+  eslint:
+    name: ESLint
+    runs-on: ubuntu-latest
+    if: ${{ inputs.run-eslint }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: ESLint
+        uses: reviewdog/action-eslint@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
