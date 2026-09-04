@@ -316,7 +316,7 @@ It is recommended to apply appropriate resolution labels such as `triage:out-of-
 # <a name="triage"></a> Triage process and labels
 
 Main part of adding and updating labels is done through the triage process by a triage team or the implementation team, which are both part of maintainers. This is to make sure an issue is at an acceptable level (description, clarity) before it is assigned to be analysed.
-In Identus, we are aiming that all the components are using same labels to bring convenience in review and coherence. This will necessit education within the maintainers community. We believe adding labels will have little impact on the engineers daily routine.
+In Identus, we are aiming that all the components are using the same labels to bring convenience in review and coherence. This will necessitate education within the maintainers community. We believe adding labels will have little impact on the engineers daily routine.
 
 Labels are categorised with a prefix that will help showing the info in the same order on a labeled issue:
 
