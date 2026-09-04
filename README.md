@@ -10,7 +10,7 @@ This repository aggregates assets and information used across the Identus projec
 
 - **identus-docker** – Docker Compose configuration for running the Cloud Agent, Mediator and their dependencies. See [dockerize-identus.md](identus-docker/dockerize-identus.md).
 - **resources** – Logos and documents such as the Identus Technical Charter.
-- **docs** – Project-related documentation, including [`did:prism` compliance status](docs/did-prism-compliance.md).
+- **docs** – Project-related documentation, including [`did:prism` compliance status](docs/did-prism-compliance.md), the [React Native integration guide](docs/react-native-integration.md), the [identity wallet specification](docs/identity-wallet-specification.md), and the [React / React Native platform adoption guide](docs/platform-adoption.md).
 - **workshops** – Example applications demonstrating how to build with the Identus SDKs.
 
 Project policies are documented in [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md), [`CONTRIBUTING.md`](CONTRIBUTING.md), [`DCO.md`](DCO.md) and [`SECURITY.md`](SECURITY.md).
@@ -19,9 +19,19 @@ Project policies are documented in [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md), [
 
 If you want to try Identus locally the easiest way is to use Docker Compose. Follow the steps in [`identus-docker/dockerize-identus.md`](identus-docker/dockerize-identus.md) and then explore the [Quick Start Guide](https://hyperledger-identus.github.io/docs/home/quick-start/) on the documentation site.
 
+## Workshops
+
+| Workshop | Platform | Description |
+| ---------- | ---------- | ------------- |
+| [sdjwt-medical-prescription](workshops/sdjwt-medical-prescription) | Next.js (web) | Medical prescription credential issuance and verification |
+| [RareEvo-2025](workshops/RareEvo-2025) | Next.js (web) | SD-JWT credentials with connectionless flows and Cardano DID publishing |
+| [react-native-identity-wallet](workshops/react-native-identity-wallet) | Expo / React Native (mobile) | Full holder identity wallet for iOS and Android |
+
 ## Use Cases
 
 To see concrete examples of how Hyperledger Identus is used in the real world, check out our [Use-Cases Documentation](docs/use-cases.md).
+
+For React and React Native Identity Wallet adoption, see the [Platform Adoption Guide](docs/platform-adoption.md) and the [Identity Wallet Specification](docs/identity-wallet-specification.md).
 
 ## Other Identus repositories
 
