@@ -1,0 +1,23 @@
+on:
+  release:
+    types: [published, created]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Determine Version Name
+        run: |
+          if [[ "${{ github.event.release.draft }}" == "true" ]]; then
+            echo "VERSION=${{ github.ref_name }}-draft" >> $GITHUB_ENV
+          else
+            echo "VERSION=${{ github.ref_name }}" >> $GITHUB_ENV
+          fi
+
+      - name: Trigger integration release
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.IDENTUS_CI }}
+          repository: hyperledger-identus/integration
+          event-type: integration
+          client-payload: '{ "component": "release", "version": "${{ env.VERSION }}" }'
