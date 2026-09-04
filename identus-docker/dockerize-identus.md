@@ -102,3 +102,33 @@ By changing the following:
   ```
 
 We recommended way of running docker compose `docker compose up --build --remove-orphans --force-recreate` (just to be extra sure there is no confusion with caches)
+
+### Windows Users - Postgres Init Script Fails (CRLF Line Endings)
+ 
+If you see the following error when starting the Postgres container on Windows:
+ 
+```
+/usr/local/bin/docker-entrypoint.sh: line 174: /docker-entrypoint-initdb.d/init-script.sh: cannot execute: required file not found
+```
+ 
+This happens because Windows uses CRLF (`\r\n`) line endings by default, which are incompatible with Linux-based Docker containers. The Postgres init script must use Unix (LF) line endings to execute correctly inside the container.
+ 
+**Prevention (recommended) — configure Git before cloning:**
+ 
+```bash
+git config core.autocrlf false
+```
+ 
+This tells Git not to auto-convert line endings on Windows, ensuring scripts are checked out with the correct LF endings.
+ 
+**Fix — if you have already cloned the repo:**
+ 
+```bash
+dos2unix identus-docker/postgres-init-script.sh
+```
+ 
+Then restart your containers:
+ 
+```bash
+docker compose down && docker compose up
+```
